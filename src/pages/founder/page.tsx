@@ -21,7 +21,7 @@ const founders: Founder[] = [
     name: "Rohit",
     role: "Founder · RSP in Japan",
     location: "Kyoto, Japan",
-    image: "src/assets/Gemini_Generated_Image_a0bu8ha0bu8ha0bu.png",
+    image: "/assets/Gemini_Generated_Image_a0bu8ha0bu8ha0bu.png",
     statement: "Building a bridge between ambition and a life in Japan.",
     bio: "RSP in Japan was built around a simple idea: students should never feel like they are navigating the journey alone. From language learning to cultural understanding and the next step toward Japan, the goal has always been to make the path clearer, more human, and more honest.",
     tags: [
