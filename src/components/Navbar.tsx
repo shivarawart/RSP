@@ -25,7 +25,7 @@ const navItems: NavItem[] = [
     href: "/JapanStudy",
   },
   {
-    name: "founder",
+    name: "Founder",
     href: "/founder",
   },
   {
@@ -365,29 +365,7 @@ export default function Navbar() {
               sm:pl-3
             "
           >
-            <span
-              className={`
-                flex
-                h-10
-                w-10
-                items-center
-                justify-center
-                rounded-xl
-                text-sm
-                font-black
-                transition-all
-                duration-300
-                group-hover:rotate-6
-                group-hover:scale-105
-                ${
-                  redMode
-                    ? "bg-white text-[#8F1018]"
-                    : "bg-[#8F1018] text-white"
-                }
-              `}
-            >
-              R
-            </span>
+        
 
             <div className="hidden items-center sm:flex">
               <span
