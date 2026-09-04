@@ -4,7 +4,7 @@ import WhyRSP from "../../components/WhyRSP";
 function App() {
   return (
     <div>
-      <Hero founderImage="/Gemini_Generated_Image_ht6yuvht6yuvht6y.png" />
+      <Hero founderImage="public/Gemini_Generated_Image_ht6yuvht6yuvht6y.png" />
       <StatsSection />
       <WhyRSP />
     </div>
