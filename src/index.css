@@ -1,0 +1,66 @@
+@import "tailwindcss";
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"); */
+
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #111111;
+  background: #f8f7f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f8f7f4;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  background: #d71920;
+  color: white;
+}
+
+.japan-hero-pagination .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  margin: 0 4px !important;
+  background: rgba(255, 255, 255, 0.35);
+  opacity: 1;
+  transition:
+    width 300ms ease,
+    background 300ms ease;
+}
+
+.japan-hero-pagination .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 999px;
+  background: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

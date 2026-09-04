@@ -1,0 +1,497 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+
+type NavItem = {
+  label: string;
+  href: string;
+  number: string;
+};
+
+const navItems: NavItem[] = [
+  { label: "Home", href: "#home", number: "01" },
+  { label: "About", href: "#about", number: "02" },
+  { label: "Projects", href: "#projects", number: "03" },
+  { label: "Services", href: "#services", number: "04" },
+  { label: "Contact", href: "#contact", number: "05" },
+];
+
+export default function Navbar() {
+  const navRef = useRef<HTMLElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
+  const itemsRef = useRef<HTMLUListElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
+  const menuRef = useRef<HTMLButtonElement>(null);
+
+  const [activeItem, setActiveItem] = useState("Home");
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const items = gsap.utils.toArray<HTMLElement>(".nav-item");
+
+      const timeline = gsap.timeline({
+        defaults: {
+          ease: "power3.out",
+        },
+      });
+
+      timeline
+        .from(navRef.current, {
+          x: -40,
+          opacity: 0,
+          duration: 0.8,
+        })
+        .from(
+          logoRef.current,
+          {
+            y: -20,
+            opacity: 0,
+            duration: 0.5,
+          },
+          "-=0.4",
+        )
+        .from(
+          items,
+          {
+            x: -25,
+            opacity: 0,
+            stagger: 0.08,
+            duration: 0.45,
+          },
+          "-=0.2",
+        )
+        .from(
+          footerRef.current,
+          {
+            y: 20,
+            opacity: 0,
+            duration: 0.5,
+          },
+          "-=0.2",
+        );
+    }, navRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsMobileOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const toggleMobileMenu = () => {
+    if (!menuRef.current) return;
+
+    setIsMobileOpen((prev) => !prev);
+  };
+
+  const handleNavigation = (item: NavItem) => {
+    setActiveItem(item.label);
+    setIsMobileOpen(false);
+  };
+
+  return (
+    <>
+      {/* Mobile Header */}
+      <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#180708]/90 px-5 py-4 backdrop-blur-xl lg:hidden">
+        <div className="flex items-center justify-between">
+          <a
+            href="#home"
+            className="group flex items-center gap-3"
+            onClick={() => setActiveItem("Home")}
+          >
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-sm font-black text-[#8f1018] shadow-lg shadow-red-950/30">
+              R
+            </span>
+
+            <span className="text-lg font-bold tracking-tight text-white">
+              RED<span className="text-red-500">.</span>
+            </span>
+          </a>
+
+          <button
+            ref={menuRef}
+            type="button"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMobileOpen}
+            className="group relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl border border-white/15 bg-white/5"
+          >
+            <span
+              className={`absolute h-[2px] w-5 bg-white transition-all duration-300 ${
+                isMobileOpen ? "rotate-45" : "-translate-y-1.5"
+              }`}
+            />
+
+            <span
+              className={`absolute h-[2px] w-5 bg-red-400 transition-all duration-300 ${
+                isMobileOpen ? "-rotate-45" : "translate-y-1.5"
+              }`}
+            />
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed inset-0 z-40 bg-[#180708] transition-all duration-500 lg:hidden ${
+          isMobileOpen
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
+        }`}
+      >
+        <div className="flex h-full flex-col justify-center px-8">
+          <p className="mb-8 text-xs font-semibold uppercase tracking-[0.35em] text-red-400">
+            Navigation
+          </p>
+
+          <nav>
+            <ul className="space-y-2">
+              {navItems.map((item) => {
+                const active = activeItem === item.label;
+
+                return (
+                  <li key={item.label}>
+                    <a
+                      href={item.href}
+                      onClick={() => handleNavigation(item)}
+                      className="group flex items-center gap-5 py-3"
+                    >
+                      <span className="text-xs text-white/30 transition-colors group-hover:text-red-400">
+                        {item.number}
+                      </span>
+
+                      <span
+                        className={`text-4xl font-bold tracking-tight transition-all duration-300 ${
+                          active
+                            ? "translate-x-2 text-white"
+                            : "text-white/50 group-hover:translate-x-2 group-hover:text-white"
+                        }`}
+                      >
+                        {item.label}
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+
+          <div className="mt-12 h-px w-full bg-white/10" />
+
+          <p className="mt-6 text-sm text-white/40">
+            Building digital experiences
+            <br />
+            that feel different.
+          </p>
+        </div>
+      </div>
+
+      {/* Desktop Sidebar */}
+      <aside
+        ref={navRef}
+        className="fixed bottom-0 left-0 top-0 z-50 hidden w-[280px] border-r border-white/10 bg-[#180708] lg:block"
+      >
+        {/* Decorative red glow */}
+        <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-red-700/20 blur-[100px]" />
+
+        {/* Logo */}
+        <div
+          ref={logoRef}
+          className="relative flex h-24 items-center border-b border-white/10 px-7"
+        >
+          <a
+            href="#home"
+            className="group flex items-center gap-3"
+            onClick={() => setActiveItem("Home")}
+          >
+            <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white font-black text-[#8f1018] transition-transform duration-300 group-hover:rotate-6">
+              R
+            </span>
+
+            <div>
+              <span className="block text-lg font-bold tracking-tight text-white">
+                RED<span className="text-red-500">.</span>
+              </span>
+
+              <span className="text-[9px] font-medium uppercase tracking-[0.3em] text-white/35">
+                Digital Studio
+              </span>
+            </div>
+          </a>
+        </div>
+
+        {/* Navigation */}
+        <div className="relative flex h-[calc(100%-6rem)] flex-col px-5 py-10">
+          <div className="mb-6 px-3">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/30">
+              Menu
+            </span>
+          </div>
+
+          <nav>
+            <ul ref={itemsRef} className="space-y-1">
+              {navItems.map((item) => {
+                const active = activeItem === item.label;
+
+                return (
+                  <li key={item.label} className="nav-item">
+                    <a
+                      href={item.href}
+                      onClick={() => handleNavigation(item)}
+                      className={`group relative flex h-14 items-center gap-4 overflow-hidden rounded-xl px-4 transition-all duration-300 ${
+                        active
+                          ? "bg-red-700 text-white"
+                          : "text-white/50 hover:bg-white/[0.06] hover:text-white"
+                      }`}
+                    >
+                      {/* Hover background */}
+                      <span
+                        className={`absolute inset-0 origin-left bg-red-700 transition-transform duration-300 ${
+                          active
+                            ? "scale-x-100"
+                            : "scale-x-0 group-hover:scale-x-100"
+                        }`}
+                      />
+
+                      {/* Number */}
+                      <span
+                        className={`relative z-10 w-6 text-[10px] font-bold transition-colors ${
+                          active
+                            ? "text-white/60"
+                            : "text-white/20 group-hover:text-white/60"
+                        }`}
+                      >
+                        {item.number}
+                      </span>
+
+                      {/* Label */}
+                      <span className="relative z-10 flex-1 text-sm font-semibold">
+                        {item.label}
+                      </span>
+
+                      {/* Arrow */}
+                      <span
+                        className={`relative z-10 text-lg transition-all duration-300 ${
+                          active
+                            ? "translate-x-0 opacity-100"
+                            : "-translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+                        }`}
+                      >
+                        →
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+
+          {/* Bottom content */}
+          <div ref={footerRef} className="mt-auto">
+            <div className="mb-5 h-px w-full bg-white/10" />
+
+            <div className="rounded-2xl border border-red-500/10 bg-red-950/20 p-4">
+              <div className="mb-3 flex items-center gap-2">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-60" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-red-500" />
+                </span>
+
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-red-300">
+                  Available
+                </span>
+              </div>
+
+              <p className="text-xs leading-relaxed text-white/40">
+                Open for new projects, collaborations and ideas.
+              </p>
+
+              <a
+                href="#contact"
+                onClick={() => setActiveItem("Contact")}
+                className="mt-4 flex items-center justify-between rounded-lg bg-white px-3 py-2.5 text-xs font-bold text-[#8f1018] transition-all duration-300 hover:bg-red-500 hover:text-white"
+              >
+                Let's Talk
+                <span>↗</span>
+              </a>
+            </div>
+
+            <p className="mt-5 px-1 text-[9px] uppercase tracking-[0.2em] text-white/20">
+              © 2026 RED Studio
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      {/* Desktop content offset helper */}
+      <div className="hidden lg:block lg:pl-[280px]" />
+    </>
+  );
+}
+
+
+
+
+//usage//
+
+
+import Navbar from "./components/Navbar";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-[#100405] text-white">
+      <Navbar />
+
+      <div className="lg:pl-[280px]">
+        <section
+          id="home"
+          className="flex min-h-screen items-center px-6 py-24 sm:px-10 lg:px-16"
+        >
+          <div className="max-w-5xl">
+            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-red-400">
+              Digital Experiences
+            </p>
+
+            <h1 className="text-5xl font-black tracking-tight sm:text-7xl lg:text-8xl">
+              Design that
+              <span className="block text-red-600">moves people.</span>
+            </h1>
+
+            <p className="mt-8 max-w-xl text-base leading-7 text-white/45 sm:text-lg">
+              We create modern digital products, experiences and interfaces
+              designed to make an impact.
+            </p>
+          </div>
+        </section>
+
+        <section id="about" className="min-h-screen px-6 py-32">
+          <h2 className="text-5xl font-bold">About</h2>
+        </section>
+
+        <section id="projects" className="min-h-screen px-6 py-32">
+          <h2 className="text-5xl font-bold">Projects</h2>
+        </section>
+
+        <section id="services" className="min-h-screen px-6 py-32">
+          <h2 className="text-5xl font-bold">Services</h2>
+        </section>
+
+        <section id="contact" className="min-h-screen px-6 py-32">
+          <h2 className="text-5xl font-bold">Contact</h2>
+        </section>
+      </div>
+    </main>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```tsx
+import Hero from "./components/Hero";
+import StatsSection, { type StatItem } from "./components/stateSection";
+
+const statsData: StatItem[] = [
+  {
+    value: "5+",
+    label: "years of guidance",
+    sublabel: "Since 2020",
+    icon: "🎓",
+  },
+  {
+    value: "50+",
+    label: "students in Japan",
+    sublabel: "Growing community",
+    icon: "🇯🇵",
+  },
+  {
+    value: "95%",
+    label: "student satisfaction",
+    sublabel: "Based on feedback",
+    icon: "✦",
+  },
+  {
+    value: "10+",
+    label: "partner institutions",
+    sublabel: "Across Japan",
+    icon: "◎",
+  },
+  {
+    value: "100%",
+    label: "personal guidance",
+    sublabel: "From start to finish",
+    icon: "↗",
+  },
+];
+
+export default function Home() {
+  return (
+    <main className="min-h-screen overflow-x-hidden bg-[#090203]">
+      {/* Navigation */}
+      {/* <Navbar /> */}
+
+      {/* HOME / HERO */}
+      <Hero />
+
+      {/* STATS */}
+      <StatsSection stats={statsData} />
+
+      {/* ABOUT */}
+      <section
+        id="about"
+        className="min-h-screen bg-white"
+      >
+        {/* About section */}
+      </section>
+
+      {/* WORK / SUCCESS STORIES */}
+      <section
+        id="work"
+        className="min-h-screen bg-[#090203]"
+      >
+        {/* Work / Success Stories */}
+      </section>
+
+      {/* SERVICES / COURSES */}
+      <section
+        id="services"
+        className="min-h-screen bg-white"
+      >
+        {/* Services / Courses */}
+      </section>
+
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="min-h-screen bg-[#8F1018]"
+      >
+        {/* Contact */}
+      </section>
+
+      {/* Footer */}
+      {/* <Footer /> */}
+    </main>
+  );
+}
+```
