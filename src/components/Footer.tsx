@@ -109,23 +109,23 @@ export default function Footer() {
     return () => ctx.revert();
   }, []);
 
-  const scrollToSection = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) => {
-    if (!href.startsWith("#")) return;
+  // const scrollToSection = (
+  //   event: React.MouseEvent<HTMLAnchorElement>,
+  //   href: string,
+  // ) => {
+  //   if (!href.startsWith("#")) return;
 
-    event.preventDefault();
+  //   event.preventDefault();
 
-    const target = document.querySelector(href);
+  //   const target = document.querySelector(href);
 
-    if (!target) return;
+  //   if (!target) return;
 
-    target.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
+  //   target.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "start",
+  //   });
+  // };
 
   const handleNavigation = (route: string, href?: string) => {
     if (route) {

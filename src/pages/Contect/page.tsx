@@ -131,7 +131,7 @@ function CheckIcon() {
 
 export default function Contact() {
   const pageRef = useRef<HTMLDivElement>(null);
-  const formRef = useRef<HTMLFormElement>(null);
+  // const formRef = useRef<HTMLFormElement>(null);
 
  
   /* =======================================================

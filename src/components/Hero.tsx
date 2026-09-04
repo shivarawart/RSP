@@ -128,16 +128,16 @@ export default function Hero({ founderImage }: HeroProps) {
     return () => ctx.revert();
   }, []);
 
-  const scrollTo = (id: string) => {
-    const element = document.querySelector(id);
+  // const scrollTo = (id: string) => {
+  //   const element = document.querySelector(id);
 
-    if (!element) return;
+  //   if (!element) return;
 
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
+  //   element.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "start",
+  //   });
+  // };
 
   const handleStartLearning = () => {
     // Navigate to courses page first
