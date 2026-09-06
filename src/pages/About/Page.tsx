@@ -472,42 +472,49 @@ export default function AboutUs() {
         className="relative mx-auto max-w-7xl px-5 pb-16 pt-20 sm:px-8 sm:pb-20 sm:pt-24 lg:px-10 lg:pb-24 lg:pt-28"
       >
         <div className="grid items-end gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          {/* Left: Eyebrow + Title */}
           <div>
-            <div data-eyebrow className="mb-5 flex items-center gap-3">
-              <span className="relative flex h-3 w-3">
+            {/* Eyebrow */}
+            <div data-eyebrow className="mb-6 flex items-center gap-3">
+              <span className="relative flex h-2.5 w-2.5">
                 <span className="absolute inset-0 animate-ping rounded-full bg-red-600 opacity-40" />
-                <span className="relative h-3 w-3 rounded-full bg-red-600" />
+                <span className="relative h-2.5 w-2.5 rounded-full bg-red-600" />
               </span>
 
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-red-600">
+              <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-red-600">
                 Our story · Since 2020
               </span>
             </div>
 
+            {/* Title */}
             <h2
-              className="max-w-3xl overflow-hidden text-[clamp(3rem,7vw,6.8rem)] font-black leading-[0.88] tracking-[-0.075em]"
+              className="max-w-3xl overflow-hidden text-[clamp(2.6rem,6.5vw,6rem)] font-black leading-[0.9] tracking-[-0.065em] text-neutral-900"
               style={{ perspective: "900px" }}
             >
               <span data-title-line className="block">
                 Five years.
               </span>
 
-              <span data-title-line className="block bg-gradient-to-r from-red-600 via-red-600 to-red-500 bg-clip-text text-transparent">
+              <span
+                data-title-line
+                className="block bg-gradient-to-r from-red-600 via-red-600 to-red-500 bg-clip-text text-transparent"
+              >
                 One clear path.
               </span>
             </h2>
           </div>
 
+          {/* Right: Intro text */}
           <div data-intro className="max-w-xl lg:justify-self-end">
-            <p className="text-lg font-medium leading-[1.45] tracking-[-0.02em] text-neutral-700 sm:text-xl lg:text-2xl">
+            <p className="text-base font-medium leading-[1.55] tracking-[-0.01em] text-neutral-700 sm:text-lg lg:text-xl">
               RSP in Japan began with a simple belief: students deserve an
-              honest, human bridge between where they are and the life they are
+              honest, human bridge between where they are and the life they’re
               working toward.
             </p>
 
-            <div className="mt-6 flex items-center gap-3">
+            {/* Divider + Label */}
+            <div className="mt-7 flex items-center gap-3">
               <span className="h-px w-10 bg-gradient-to-r from-red-600 to-transparent" />
-
               <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-400">
                 About the company
               </span>
@@ -536,7 +543,10 @@ export default function AboutUs() {
               poster="/images/about-poster.jpg"
               className="h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105"
             >
-              <source src="/videos/japan-about.mp4" type="video/mp4" />
+              <source
+                src="/changes/video_7bdd68e2b867.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
 

@@ -1536,23 +1536,189 @@ function FinalCTA() {
         </div>
         <div className="absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-white/5 blur-[120px]" />
         <div className="absolute -left-40 top-40 h-[400px] w-[400px] rounded-full bg-black/10 blur-[100px]" />
+        {/* Extra depth glow */}
+        <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.06] blur-[160px]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1500px]">
-        <div data-reveal className="max-w-5xl">
-          <span className="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.3em] text-white/70">
-            <span className="h-2 w-2 rounded-full bg-white/80 animate-pulse" />
-            Your Japan starts with a decision.
+        {/* Header: trust + social proof */}
+        <div data-reveal className="mx-auto max-w-5xl text-center">
+          <span className="mb-6 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.28em] text-white/80 backdrop-blur-sm">
+            <span className="h-2 w-2 rounded-full bg-white shadow-[0_0_16px_rgba(255,255,255,0.6)] animate-pulse" />
+            Students who trust us
           </span>
 
-          <h2 className="text-[clamp(3.5rem,8vw,9rem)] font-black leading-[0.82] tracking-[-0.075em] drop-shadow-2xl">
-            Make the next
-            <span className="block bg-gradient-to-r from-white/50 via-white/40 to-white/30 bg-clip-text text-transparent">
-              step count.
+          <h2 className="text-[clamp(2.6rem,7vw,6rem)] font-black leading-[0.85] tracking-[-0.07em] drop-shadow-2xl">
+            Real people. Real
+            <span className="block bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
+              Japan journeys.
             </span>
           </h2>
 
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+          <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-white/80 sm:text-base">
+            From first hiragana to landing in Yokohama — our students are
+            studying, working, and building lives in Japan. These are their
+            stories.
+          </p>
+        </div>
+
+        {/* Student image grid */}
+        <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Student 1 */}
+          <figure className="group/student relative overflow-hidden rounded-3xl bg-white/10 ring-1 ring-white/20 transition-all duration-500 hover:-translate-y-1 hover:bg-white/15 hover:ring-white/30">
+            <img
+              src="changes/WhatsApp Image 2026-09-04 at 19.50.59 (1).jpeg"
+              alt="Student preparing for JLPT in a cafe"
+              className="h-72 w-full object-cover transition-transform duration-700 group-hover/student:scale-105 sm:h-80"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
+            {/* Badge */}
+            <div className="absolute left-3 top-3 rounded-full border border-white/30 bg-white/10 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white">
+              N5 → N4
+            </div>
+            <div className="absolute bottom-4 left-4 right-4">
+              {/* <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/90">
+                Student 1
+              </h3>
+              <p className="mt-1 text-[12px] leading-5 text-white/80">
+                “In 6 months I went from zero to passing N5. The structure and
+                support made all the difference.”
+              </p> */}
+            </div>
+          </figure>
+
+          {/* Student 2 */}
+          <figure className="group/student relative overflow-hidden rounded-3xl bg-white/10 ring-1 ring-white/20 transition-all duration-500 hover:-translate-y-1 hover:bg-white/15 hover:ring-white/30">
+            <img
+              src="changes/WhatsApp Image 2026-09-04 at 19.50.59 (2).jpeg"
+              alt="Student attending online Japanese class from home"
+              className="h-72 w-full object-cover transition-transform duration-700 group-hover/student:scale-105 sm:h-80"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
+            <div className="absolute left-3 top-3 rounded-full border border-white/30 bg-white/10 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white">
+              Online
+            </div>
+            <div className="absolute bottom-4 left-4 right-4">
+              {/* <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/90">
+                Priya, 26
+              </h3>
+              <p className="mt-1 text-[12px] leading-5 text-white/80">
+                “Balancing work and study was tough. The flexible schedule and
+                focused lessons helped me clear N4.”
+              </p> */}
+            </div>
+          </figure>
+
+          {/* Student 3 */}
+          <figure className="group/student relative overflow-hidden rounded-3xl bg-white/10 ring-1 ring-white/20 transition-all duration-500 hover:-translate-y-1 hover:bg-white/15 hover:ring-white/30">
+            <img
+              src="changes/WhatsApp Image 2026-09-04 at 19.50.59.jpeg"
+              alt="Student exploring streets in Japan after passing JLPT"
+              className="h-72 w-full object-cover transition-transform duration-700 group-hover/student:scale-105 sm:h-80"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
+            <div className="absolute left-3 top-3 rounded-full border border-white/30 bg-white/10 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white">
+              In Japan
+            </div>
+            <div className="absolute bottom-4 left-4 right-4">
+              {/* <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/90">
+                Rohan, 24
+              </h3>
+              <p className="mt-1 text-[12px] leading-5 text-white/80">
+                “From Rohtak to Yokohama. The courses gave me the confidence and
+                language skills to start my life here.”
+              </p> */}
+            </div>
+          </figure>
+
+          <figure className="group/student relative overflow-hidden rounded-3xl bg-white/10 ring-1 ring-white/20 transition-all duration-500 hover:-translate-y-1 hover:bg-white/15 hover:ring-white/30">
+            <img
+              src="changes/WhatsApp Image 2026-09-04 at 19.51.00.jpeg"
+              alt="Student exploring streets in Japan after passing JLPT"
+              className="h-72 w-full object-cover transition-transform duration-700 group-hover/student:scale-105 sm:h-80"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
+            <div className="absolute left-3 top-3 rounded-full border border-white/30 bg-white/10 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white">
+              In Japan
+            </div>
+            <div className="absolute bottom-4 left-4 right-4">
+              {/* <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/90">
+                Rohan, 24
+              </h3>
+              <p className="mt-1 text-[12px] leading-5 text-white/80">
+                “From Rohtak to Yokohama. The courses gave me the confidence and
+                language skills to start my life here.”
+              </p> */}
+            </div>
+          </figure>
+
+          <figure className="group/student relative overflow-hidden rounded-3xl bg-white/10 ring-1 ring-white/20 transition-all duration-500 hover:-translate-y-1 hover:bg-white/15 hover:ring-white/30">
+            <img
+              src="changes/WhatsApp Image 2026-09-04 at 19.51.00 (2).jpeg"
+              alt="Student exploring streets in Japan after passing JLPT"
+              className="h-72 w-full object-cover transition-transform duration-700 group-hover/student:scale-105 sm:h-80"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
+            <div className="absolute left-3 top-3 rounded-full border border-white/30 bg-white/10 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white">
+              In Japan
+            </div>
+            <div className="absolute bottom-4 left-4 right-4">
+              {/* <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/90">
+                Rohan, 24
+              </h3>
+              <p className="mt-1 text-[12px] leading-5 text-white/80">
+                “From Rohtak to Yokohama. The courses gave me the confidence and
+                language skills to start my life here.”
+              </p> */}
+            </div>
+          </figure>
+        </div>
+
+        {/* Stats / trust row */}
+        <div className="mt-16 grid grid-cols-2 gap-4 rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm sm:grid-cols-4 sm:p-8">
+          <div>
+            <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/70">
+              Students
+            </div>
+            <div className="mt-1 text-2xl font-black text-white sm:text-3xl">
+              2,500+
+            </div>
+          </div>
+          <div>
+            <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/70">
+              Pass rate
+            </div>
+            <div className="mt-1 text-2xl font-black text-white sm:text-3xl">
+              92%
+            </div>
+          </div>
+          <div>
+            <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/70">
+              Countries
+            </div>
+            <div className="mt-1 text-2xl font-black text-white sm:text-3xl">
+              12+
+            </div>
+          </div>
+          <div>
+            <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/70">
+              Instructors
+            </div>
+            <div className="mt-1 text-2xl font-black text-white sm:text-3xl">
+              15+
+            </div>
+          </div>
+        </div>
+
+        {/* CTA area (your existing CTAs, slightly refined) */}
+        <div className="mt-16 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="max-w-xl">
+            <p className="text-sm leading-7 text-white/80 sm:text-base">
+              Your Japan starts with a decision. Make the next step count.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
             <Link
               to="/contact"
               className="group relative flex items-center justify-between gap-10 overflow-hidden rounded-full bg-gradient-to-r from-white to-white/90 px-7 py-4 text-sm font-black text-[#111] shadow-2xl shadow-white/30 transition-all duration-300 hover:px-9 hover:shadow-white/40 hover:scale-105"
@@ -1578,9 +1744,10 @@ function FinalCTA() {
           </div>
         </div>
 
-        <div className="mt-28 flex flex-col justify-between gap-8 border-t-2 border-white/25 pt-7 text-xs font-bold uppercase tracking-[0.2em] text-white/50 sm:flex-row">
+        {/* Footer meta line */}
+        <div className="mt-20 flex flex-col justify-between gap-6 border-t-2 border-white/25 pt-6 text-xs font-bold uppercase tracking-[0.2em] text-white/60 sm:flex-row">
           <span className="flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-white/60" />
+            <span className="h-2 w-2 rounded-full bg-white/70" />
             Study in Japan · で学ぶ
           </span>
           <span>Yokohama · Kanagawa</span>

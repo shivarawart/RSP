@@ -8,33 +8,13 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  {
-    name: "Home",
-    href: "/",
-  },
-  {
-    name: "About",
-    href: "/about",
-  },
-  {
-    name: "Courses",
-    href: "/courses",
-  },
-  {
-    name: "Study in Japan",
-    href: "/JapanStudy",
-  },
-  {
-    name: "Founder",
-    href: "/founder",
-  },
-  {
-    name: "Contact",
-    href: "/contact",
-  },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Courses", href: "/courses" },
+  { name: "Study in Japan", href: "/JapanStudy" },
+  { name: "Founder", href: "/founder" },
+  { name: "Contact", href: "/contact" },
 ];
-
-// const NAV_HEIGHT = 90;
 
 export default function Navbar() {
   const location = useLocation();
@@ -49,7 +29,7 @@ export default function Navbar() {
   const [scrollingUp, setScrollingUp] = useState(false);
 
   /* ---------------------------------------
-     ACTIVE ROUTE
+       ACTIVE ROUTE
   --------------------------------------- */
 
   const isActiveRoute = useCallback(
@@ -57,7 +37,6 @@ export default function Navbar() {
       if (href === "/") {
         return location.pathname === "/";
       }
-
       return (
         location.pathname === href || location.pathname.startsWith(`${href}/`)
       );
@@ -66,65 +45,37 @@ export default function Navbar() {
   );
 
   /* ---------------------------------------
-     NAVBAR INTRO
+       NAVBAR INTRO
   --------------------------------------- */
 
   useEffect(() => {
     const nav = navRef.current;
-
     if (!nav) return;
 
     const ctx = gsap.context(() => {
       const timeline = gsap.timeline({
-        defaults: {
-          ease: "power3.out",
-        },
+        defaults: { ease: "power3.out" },
       });
 
       timeline.fromTo(
         nav,
-        {
-          y: -100,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power4.out",
-        },
+        { y: -100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power4.out" },
       );
 
       timeline.from(
         ".nav-logo",
-        {
-          x: -25,
-          opacity: 0,
-          duration: 0.5,
-        },
+        { x: -25, opacity: 0, duration: 0.5 },
         "-=0.45",
       );
 
       timeline.from(
         ".desktop-link",
-        {
-          y: -15,
-          opacity: 0,
-          duration: 0.4,
-          stagger: 0.07,
-        },
+        { y: -15, opacity: 0, duration: 0.4, stagger: 0.07 },
         "-=0.3",
       );
 
-      timeline.from(
-        ".nav-cta",
-        {
-          x: 20,
-          opacity: 0,
-          duration: 0.4,
-        },
-        "-=0.25",
-      );
+      timeline.from(".nav-cta", { x: 20, opacity: 0, duration: 0.4 }, "-=0.25");
     }, nav);
 
     return () => {
@@ -133,7 +84,7 @@ export default function Navbar() {
   }, []);
 
   /* ---------------------------------------
-     SCROLL DETECTION
+       SCROLL DETECTION
   --------------------------------------- */
 
   useEffect(() => {
@@ -141,23 +92,13 @@ export default function Navbar() {
 
     const handleScroll = () => {
       const currentScroll = window.scrollY;
-
       setScrolled(currentScroll > 40);
-
-      if (currentScroll < previousScroll) {
-        setScrollingUp(true);
-      } else if (currentScroll > previousScroll) {
-        setScrollingUp(false);
-      }
-
+      setScrollingUp(currentScroll < previousScroll);
       previousScroll = currentScroll;
     };
 
     handleScroll();
-
-    window.addEventListener("scroll", handleScroll, {
-      passive: true,
-    });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -165,7 +106,7 @@ export default function Navbar() {
   }, []);
 
   /* ---------------------------------------
-     CLOSE MOBILE MENU
+       CLOSE MOBILE MENU
   --------------------------------------- */
 
   const closeMobileMenu = useCallback(() => {
@@ -173,38 +114,27 @@ export default function Navbar() {
   }, []);
 
   /* ---------------------------------------
-     MOBILE MENU ANIMATION
+       MOBILE MENU ANIMATION
   --------------------------------------- */
 
   useEffect(() => {
     const menu = mobileMenuRef.current;
     const links = mobileLinksRef.current;
-
     if (!menu) return;
 
     menuTimelineRef.current?.kill();
 
     if (menuOpen) {
       document.body.style.overflow = "hidden";
-
-      gsap.set(menu, {
-        display: "block",
-      });
+      gsap.set(menu, { display: "block" });
 
       const timeline = gsap.timeline();
-
       menuTimelineRef.current = timeline;
 
       timeline.fromTo(
         menu,
-        {
-          yPercent: -100,
-        },
-        {
-          yPercent: 0,
-          duration: 0.6,
-          ease: "power4.out",
-        },
+        { yPercent: -100 },
+        { yPercent: 0, duration: 0.6, ease: "power4.out" },
       );
 
       if (links) {
@@ -228,9 +158,7 @@ export default function Navbar() {
 
     const timeline = gsap.timeline({
       onComplete: () => {
-        gsap.set(menu, {
-          display: "none",
-        });
+        gsap.set(menu, { display: "none" });
       },
     });
 
@@ -250,7 +178,7 @@ export default function Navbar() {
   }, [menuOpen]);
 
   /* ---------------------------------------
-     CLOSE MENU WHEN ROUTE CHANGES
+       CLOSE MENU WHEN ROUTE CHANGES
   --------------------------------------- */
 
   useEffect(() => {
@@ -258,7 +186,7 @@ export default function Navbar() {
   }, [location.pathname]);
 
   /* ---------------------------------------
-     RESTORE BODY SCROLL
+       RESTORE BODY SCROLL
   --------------------------------------- */
 
   useEffect(() => {
@@ -268,7 +196,7 @@ export default function Navbar() {
   }, []);
 
   /* ---------------------------------------
-     ESC KEY
+       ESC KEY
   --------------------------------------- */
 
   useEffect(() => {
@@ -281,37 +209,29 @@ export default function Navbar() {
     };
 
     window.addEventListener("keydown", handleKeyDown);
-
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [menuOpen, closeMobileMenu]);
 
   /* ---------------------------------------
-     SCROLL TO TOP AFTER ROUTE CHANGE
+       SCROLL TO TOP AFTER ROUTE CHANGE
   --------------------------------------- */
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "instant",
-    });
+    window.scrollTo({ top: 0, behavior: "instant" });
   }, [location.pathname]);
 
   /* ---------------------------------------
-     NAVBAR THEME
+       NAVBAR THEME
   --------------------------------------- */
 
-  /*
-   * Red while at the top.
-   * White after scrolling down.
-   */
   const redMode = !scrolled || scrollingUp;
 
   return (
     <>
       {/* =====================================
-          NAVBAR
+           NAVBAR
       ====================================== */}
 
       <header
@@ -330,7 +250,7 @@ export default function Navbar() {
             justify-between
             rounded-2xl
             border
-            px-2
+            px-3
             transition-all
             duration-500
             ${
@@ -349,63 +269,51 @@ export default function Navbar() {
           `}
         >
           {/* =====================================
-              LOGO
+               LOGO (visible on ALL devices)
           ====================================== */}
 
           <Link
             to="/"
             aria-label="RSP in Japan home"
-            className="
-              nav-logo
-              group
-              flex
-              items-center
-              gap-3
-              pl-2
-              sm:pl-3
-            "
+            className="nav-logo group flex items-center gap-2 sm:gap-3"
           >
-        
+            <span
+              className={`
+                text-base sm:text-lg
+                font-black
+                tracking-[-0.055em]
+                transition-colors
+                duration-300
+                ${redMode ? "text-white" : "text-[#180607]"}
+              `}
+            >
+              RSP
+            </span>
 
-            <div className="hidden items-center sm:flex">
-              <span
-                className={`
-      text-lg
-      font-black
-      tracking-[-0.055em]
-      transition-colors
-      duration-300
-      ${redMode ? "text-white" : "text-[#180607]"}
-    `}
-              >
-                RSP
-              </span>
+            <span className="mx-1 sm:mx-2 text-[10px] sm:text-[11px] font-medium text-[#E60012]">
+              /
+            </span>
 
-              <span className="mx-2 text-[11px] font-medium text-[#E60012]">
-                /
-              </span>
-
-              <span
-                className={`
-      text-[9px]
-      font-semibold
-      uppercase
-      tracking-[0.28em]
-      transition-colors
-      duration-300
-      ${redMode ? "text-white/55" : "text-[#180607]/55"}
-    `}
-              >
-                in Japan
-              </span>
-            </div>
+            <span
+              className={`
+                text-[8px] sm:text-[9px]
+                font-semibold
+                uppercase
+                tracking-[0.28em]
+                transition-colors
+                duration-300
+                ${redMode ? "text-white/55" : "text-[#180607]/55"}
+              `}
+            >
+              in Japan
+            </span>
           </Link>
 
           {/* =====================================
-              DESKTOP NAVIGATION
+               DESKTOP NAVIGATION
           ====================================== */}
 
-          <div className="hidden items-center gap-1 md:flex">
+          <div className="hidden items-center gap-1 lg:flex">
             {navItems.map((item) => {
               const active = isActiveRoute(item.href);
 
@@ -420,7 +328,7 @@ export default function Navbar() {
                     relative
                     overflow-hidden
                     rounded-xl
-                    px-4
+                    px-3.5
                     py-2.5
                     text-sm
                     font-semibold
@@ -431,7 +339,6 @@ export default function Navbar() {
                   `}
                 >
                   {/* Hover background */}
-
                   <span
                     aria-hidden="true"
                     className={`
@@ -448,7 +355,6 @@ export default function Navbar() {
                   />
 
                   {/* Text */}
-
                   <span
                     className={`
                       relative
@@ -466,7 +372,6 @@ export default function Navbar() {
                   </span>
 
                   {/* Active indicator */}
-
                   <span
                     aria-hidden="true"
                     className={`
@@ -489,7 +394,7 @@ export default function Navbar() {
           </div>
 
           {/* =====================================
-              DESKTOP CTA
+               DESKTOP CTA
           ====================================== */}
 
           <Link
@@ -498,23 +403,20 @@ export default function Navbar() {
               nav-cta
               group
               relative
-              mr-1
               hidden
               overflow-hidden
               rounded-xl
-              px-5
-              py-3
-              text-xs
+              px-4
+              py-2.5
+              text-[11px]
               font-bold
               uppercase
               tracking-[0.12em]
-              sm:mr-2
-              md:block
+              lg:block
               ${redMode ? "bg-white text-[#8F1018]" : "bg-[#8F1018] text-white"}
             `}
           >
             {/* Animated fill */}
-
             <span
               aria-hidden="true"
               className={`
@@ -542,7 +444,7 @@ export default function Navbar() {
           </Link>
 
           {/* =====================================
-              MOBILE MENU BUTTON
+               MOBILE MENU BUTTON
           ====================================== */}
 
           <button
@@ -552,18 +454,18 @@ export default function Navbar() {
             }
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
-            onClick={() => setMenuOpen((value) => !value)}
+            onClick={() => setMenuOpen((v) => !v)}
             className={`
               relative
-              mr-1
+              ml-auto
               flex
-              h-11
-              w-11
+              h-10
+              w-10
               items-center
               justify-center
               rounded-xl
               border
-              md:hidden
+              lg:hidden
               ${
                 redMode
                   ? "border-white/20 bg-white/10"
@@ -575,7 +477,7 @@ export default function Navbar() {
               className={`
                 absolute
                 h-[2px]
-                w-5
+                w-4.5
                 transition-all
                 duration-300
                 ${menuOpen ? "rotate-45" : "-translate-y-1.5"}
@@ -587,7 +489,7 @@ export default function Navbar() {
               className={`
                 absolute
                 h-[2px]
-                w-5
+                w-4.5
                 transition-all
                 duration-300
                 ${menuOpen ? "-rotate-45" : "translate-y-1.5"}
@@ -599,52 +501,24 @@ export default function Navbar() {
       </header>
 
       {/* =====================================
-          MOBILE MENU
+           MOBILE MENU
       ====================================== */}
 
       <div
         id="mobile-navigation"
         ref={mobileMenuRef}
         aria-hidden={!menuOpen}
-        className="
-          fixed
-          inset-0
-          z-40
-          hidden
-          bg-[#8F1018]
-          md:hidden
-        "
+        className="fixed inset-0 z-40 hidden bg-[#8F1018] lg:hidden"
       >
-        <div
-          className="
-            flex
-            min-h-screen
-            flex-col
-            overflow-y-auto
-            px-6
-            pb-10
-            pt-32
-            sm:px-10
-          "
-        >
+        <div className="flex min-h-screen flex-col overflow-y-auto px-6 pb-10 pt-28 sm:px-10">
           {/* Header */}
-
-          <div className="mb-10">
-            <span
-              className="
-                text-xs
-                font-semibold
-                uppercase
-                tracking-[0.3em]
-                text-white/50
-              "
-            >
+          <div className="mb-8">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/50">
               Navigation
             </span>
           </div>
 
           {/* Links */}
-
           <div ref={mobileLinksRef} className="flex flex-col">
             {navItems.map((item, index) => {
               const active = isActiveRoute(item.href);
@@ -655,61 +529,31 @@ export default function Navbar() {
                   to={item.href}
                   onClick={closeMobileMenu}
                   aria-current={active ? "page" : undefined}
-                  className="
-                    mobile-nav-link
-                    group
-                    flex
-                    items-center
-                    gap-4
-                    border-b
-                    border-white/10
-                    py-5
-                    text-left
-                  "
+                  className="mobile-nav-link group flex items-center gap-4 border-b border-white/10 py-5 text-left"
                 >
                   {/* Number */}
-
                   <span
-                    className={`
-                      w-6
-                      text-xs
-                      ${active ? "text-white" : "text-white/30"}
-                    `}
+                    className={`w-6 text-xs ${active ? "text-white" : "text-white/30"}`}
                   >
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
                   {/* Name */}
-
                   <span
                     className={`
-                      text-3xl
-                      font-bold
-                      tracking-tight
-                      text-white
-                      transition-transform
-                      duration-300
-                      group-hover:translate-x-3
-                      sm:text-5xl
-                      ${active ? "translate-x-2" : ""}
+                      text-2xl font-bold tracking-tight text-white
+                      transition-transform duration-300 group-hover:translate-x-2
+                      sm:text-4xl
+                      ${active ? "translate-x-1" : ""}
                     `}
                   >
                     {item.name}
                   </span>
 
                   {/* Arrow */}
-
                   <span
                     aria-hidden="true"
-                    className="
-                      ml-auto
-                      text-xl
-                      text-white/40
-                      transition-all
-                      duration-300
-                      group-hover:translate-x-2
-                      group-hover:text-white
-                    "
+                    className="ml-auto text-lg text-white/40 transition-all duration-300 group-hover:translate-x-1 group-hover:text-white"
                   >
                     ↗
                   </span>
@@ -719,42 +563,17 @@ export default function Navbar() {
           </div>
 
           {/* Footer */}
-
           <div className="mt-auto">
             <div className="mb-5 h-px bg-white/10" />
 
-            <p
-              className="
-                max-w-sm
-                text-sm
-                leading-6
-                text-white/40
-              "
-            >
+            <p className="max-w-sm text-sm leading-6 text-white/40">
               Helping students take the next step toward Japan.
             </p>
 
             <Link
               to="/contact"
               onClick={closeMobileMenu}
-              className="
-                mt-6
-                inline-flex
-                items-center
-                gap-2
-                rounded-full
-                border
-                border-white/20
-                px-5
-                py-3
-                text-sm
-                font-semibold
-                text-white
-                transition-all
-                duration-300
-                hover:bg-white
-                hover:text-[#8F1018]
-              "
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#8F1018]"
             >
               Start a conversation
               <span>↗</span>

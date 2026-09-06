@@ -555,8 +555,8 @@ export default function WhyRSP() {
             </div>
 
             <a
-              href="/contect"
-              target="/contect"
+              href=""
+              target=""
               rel="noopener noreferrer"
               className="group flex w-fit items-center gap-4 border border-white px-6 py-4 text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:bg-white hover:text-[#E60012]"
             >

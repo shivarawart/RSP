@@ -14,10 +14,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const CONTACT = {
   email: "connect@rspinjapan.com",
-  phone: "+91 00000 00000",
-  whatsapp: "+91 00000 00000",
-  location: "Meerut, Uttar Pradesh, India",
-  mapQuery: "Meerut, Uttar Pradesh, India",
+  phone: "+91 95579 14389",
+  whatsapp: "+91 +91 95579 14389",
+  location: "Delhi, India",
+  mapQuery: "Delhi, India",
   responseTime: "Within 24 hours",
 };
 

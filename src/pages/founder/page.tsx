@@ -529,50 +529,163 @@ export default function Founders() {
           FINAL VISION
       ===================================================== */}
 
-      <div className="px-3 py-3 sm:px-6 sm:py-6 lg:px-8">
-        <div className="relative mx-auto min-h-[500px] max-w-[1500px] overflow-hidden rounded-[1.5rem] bg-red-600 p-6 sm:p-10 lg:p-16">
-          {/* Decorative typography */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-5 top-10 select-none text-[18rem] font-black leading-none tracking-[-0.1em] text-white/[0.05]"
-          >
-            R
+      <div className="px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+        <div className="relative mx-auto max-w-full overflow-hidden rounded-2xl bg-gradient-to-br from-red-600 via-[#c4161d] to-red-700 p-5 shadow-xl shadow-red-900/30 sm:p-8 lg:p-10">
+          {/* Soft decorative glow */}
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-white/10 blur-[80px]" />
+            <div className="absolute -left-24 bottom-0 h-56 w-56 rounded-full bg-black/10 blur-[70px]" />
           </div>
 
-          <div className="relative z-10 flex min-h-[440px] flex-col justify-between">
-            <div className="flex items-center justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">
-                The vision
+          <div className="relative z-10">
+            {/* Header */}
+            <div className="mb-6 flex items-center justify-between">
+              <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/70">
+                Our collaborators
               </span>
-
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">
+              <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/40">
                 RSP / JAPAN
               </span>
             </div>
 
-            <div>
-              <p className="mb-5 max-w-xl text-xs font-bold uppercase tracking-[0.25em] text-white/50">
+            {/* Title + short copy */}
+            <div className="mb-8 max-w-3xl">
+              <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.26em] text-white/60">
                 One student at a time.
               </p>
-
-              <h3 className="max-w-5xl text-[clamp(3rem,8vw,8rem)] font-black leading-[0.84] tracking-[-0.08em] text-white">
-                Make the
-                <br />
-                path
-                <br />
-                <span className="text-white/45">clearer.</span>
+              <h3 className="text-2xl font-extrabold leading-snug tracking-tight text-white sm:text-3xl">
+                Make the path clearer with our partners in Japan.
               </h3>
             </div>
 
-            <div className="flex items-end justify-between gap-8">
-              <p className="max-w-md text-sm leading-6 text-white/60">
-                The work continues with every student, every conversation, every
-                lesson, and every step toward Japan.
-              </p>
+            {/* Collaborators grid */}
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              {/* Collaborator Card 1 */}
+              <article className="group relative overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/20 transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 hover:ring-white/30">
+                {/* Landscape image area */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden">
+                  <img
+                    src="/WhatsApp Image 2026-08-31 at 00.23.39.jpeg"
+                    alt="Tokyo University partnership session"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  {/* Soft gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                </div>
 
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/30 text-xl text-white transition-all duration-500 hover:rotate-45 hover:bg-white hover:text-red-600">
-                ↗
-              </div>
+                {/* Japan badge */}
+                <div className="absolute left-3 top-3">
+                  <div className="rounded-full border border-white/30 bg-white/20 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-md shadow-md">
+                    🇯🇵 Japan
+                  </div>
+                </div>
+
+                {/* Card content */}
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                  <div className="mb-1.5 inline-block rounded bg-red-600/90 px-2 py-0.5 text-[8px] font-bold uppercase tracking-[0.18em] text-white">
+                    Tokyo
+                  </div>
+                  <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/95">
+                    Yokohama University of Tokyo
+                  </h4>
+                  <p className="mt-1 line-clamp-2 text-[10px] leading-5 text-white/85">
+                    Research collaboration, student exchange programs, and joint
+                    workshops in tech and innovation.
+                  </p>
+                </div>
+              </article>
+
+              {/* Collaborator Card 2 */}
+              <article className="group relative overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/20 transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 hover:ring-white/30">
+                <div className="relative aspect-[16/10] w-full overflow-hidden">
+                  <img
+                    src="/changes/WhatsApp Image 2026-09-04 at 19.03.21.jpeg"
+                    alt="Kyoto Institute collaborative event"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                </div>
+
+                <div className="absolute left-3 top-3">
+                  <div className="rounded-full border border-white/30 bg-white/20 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-md shadow-md">
+                    🇯🇵 Japan
+                  </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                  <div className="mb-1.5 inline-block rounded bg-red-600/90 px-2 py-0.5 text-[8px] font-bold uppercase tracking-[0.18em] text-white">
+                    Rohit
+                  </div>
+                  <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/95">
+                    Founder and Collabrator
+                  </h4>
+                  <p className="mt-1 line-clamp-2 text-[10px] leading-5 text-white/85">
+                    Cultural exchange, mentorship, and pathway opportunities for
+                    students aiming for Japan.
+                  </p>
+                </div>
+              </article>
+              <article className="group relative overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/20 transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 hover:ring-white/30">
+                <div className="relative aspect-[16/10] w-full overflow-hidden">
+                  <img
+                    src="/changes/WhatsApp Image 2026-09-04 at 19.50.59 (3).jpeg"
+                    alt="Kyoto Institute collaborative event"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                </div>
+
+                <div className="absolute left-3 top-3">
+                  <div className="rounded-full border border-white/30 bg-white/20 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-md shadow-md">
+                    🇯🇵 Japan
+                  </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                  <div className="mb-1.5 inline-block rounded bg-red-600/90 px-2 py-0.5 text-[8px] font-bold uppercase tracking-[0.18em] text-white">
+                    suhasani karnatak
+                  </div>
+                  <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/95">
+                    Our Student
+                  </h4>
+                  <p className="mt-1 line-clamp-2 text-[10px] leading-5 text-white/85">
+                    Suhasani, Karnataka — obsessed with Japan, one step closer
+                    with every dream.
+                  </p>
+                </div>
+              </article>
+              <article className="group relative overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/20 transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 hover:ring-white/30">
+                <div className="relative aspect-[16/10] w-full overflow-hidden">
+                  <img
+                    src="/changes/WhatsApp Image 2026-09-04 at 19.51.00 (1).jpeg"
+                    alt="Kyoto Institute collaborative event"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                </div>
+
+                <div className="absolute left-3 top-3">
+                  <div className="rounded-full border border-white/30 bg-white/20 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-md shadow-md">
+                    🇯🇵 Japan
+                  </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                  <div className="mb-1.5 inline-block rounded bg-red-600/90 px-2 py-0.5 text-[8px] font-bold uppercase tracking-[0.18em] text-white">
+                    shiwam sangwan
+                  </div>
+                  <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/95">
+                    Our Student
+                  </h4>
+                  <p className="mt-1 line-clamp-2 text-[10px] leading-5 text-white/85">
+                    shiwam sangwan doesn’t just want Japan — he’s
+                    chasing it with an obsession that turns every doubt into
+                    fuel and every dream into a visa stamp
+                  </p>
+                </div>
+              </article>
+
+              {/* Optional: Add more cards as needed (same structure) */}
             </div>
           </div>
         </div>

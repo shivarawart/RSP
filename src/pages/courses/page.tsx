@@ -145,7 +145,7 @@ const formats: BatchFormat[] = [
   },
   {
     icon: "◉",
-    title: "Offline in Meerut",
+    title: "Offline in Delhi",
     description:
       "Learn in a room with people who are walking beside you.",
   },
@@ -762,62 +762,541 @@ export default function Courses() {
           HERO
       ======================================================== */}
 
-      <div
+      <section
         data-courses-hero
-        className="relative mx-auto max-w-7xl px-5 pb-20 pt-24 sm:px-8 sm:pb-24 sm:pt-28 lg:px-10 lg:pb-32 lg:pt-36"
+        className="relative isolate overflow-hidden bg-[#db1010] text-[#171111]"
       >
-        <div className="grid items-end gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-          <div>
-            {/* Eyebrow */}
+        {/* =====================================================
+      BACKGROUND IMAGE
+  ====================================================== */}
+
+        <div className="absolute inset-0 -z-100">
+          <img
+            src="https://img.yuxiaowang.com/uploads/oss/20260124/7fc3d81fa3713e22af28af2e9a429dde.png"
+            alt="Japanese language students studying in a classroom"
+            className="
+        h-full
+        w-full
+        object-cover
+        object-center
+        scale-105
+      "
+          />
+        </div>
+
+        {/* =====================================================
+      IMAGE OVERLAYS
+  ====================================================== */}
+
+        <div
+          className="
+      absolute
+      inset-0
+      -z-10
+      bg-red/100
+      backdrop-blur-[5px]
+    "
+        />
+
+        <div
+          className="
+      absolute
+      inset-0
+      -z-10
+      bg-gradient-to-r
+      from-[#f7f5f2]
+      via-[#f7f5f2]/90
+      to-[#f7f5f2]/30
+    "
+        />
+
+        <div
+          className="
+      absolute
+      inset-0
+      -z-10
+      bg-gradient-to-t
+      from-[#f7f5f2]
+      via-transparent
+      to-white/20
+    "
+        />
+
+        {/* =====================================================
+      DECORATIVE ELEMENTS
+  ====================================================== */}
+
+        <div
+          aria-hidden="true"
+          className="
+      pointer-events-none
+      absolute
+      right-[-8rem]
+      top-[-8rem]
+      -z-10
+      h-[28rem]
+      w-[28rem]
+      rounded-full
+      bg-red-600/10
+      blur-3xl
+    "
+        />
+
+        <div
+          aria-hidden="true"
+          className="
+      pointer-events-none
+      absolute
+      bottom-[-10rem]
+      left-[-10rem]
+      -z-10
+      h-[30rem]
+      w-[30rem]
+      rounded-full
+      bg-red-500/5
+      blur-3xl
+    "
+        />
+
+        {/* =====================================================
+      MAIN CONTAINER
+  ====================================================== */}
+
+        <div
+          className="
+      relative
+      mx-auto
+      max-w-[1500px]
+      px-5
+      pb-16
+      pt-28
+      sm:px-8
+      sm:pb-20
+      sm:pt-32
+      lg:px-12
+      lg:pb-28
+      lg:pt-40
+      xl:px-16
+    "
+        >
+          <div
+            className="
+        grid
+        items-end
+        gap-14
+        lg:grid-cols-[minmax(0,1.25fr)_minmax(320px,0.75fr)]
+        lg:gap-20
+        xl:gap-28
+      "
+          >
+            {/* =================================================
+          LEFT CONTENT
+      ================================================== */}
+
+            <div className="relative max-w-5xl">
+              {/* Eyebrow */}
+
+              <div
+                data-hero-eyebrow
+                className="
+            mb-7
+            inline-flex
+            items-center
+            gap-3
+            rounded-full
+            border
+            border-red-600/15
+            bg-white/70
+            px-4
+            py-2.5
+            shadow-sm
+            backdrop-blur-md
+            sm:mb-9
+          "
+              >
+                <span className="relative flex h-2.5 w-2.5">
+                  <span
+                    className="
+                absolute
+                inset-0
+                animate-ping
+                rounded-full
+                bg-red-600
+                opacity-40
+              "
+                  />
+
+                  <span
+                    className="
+                relative
+                h-2.5
+                w-2.5
+                rounded-full
+                bg-red-600
+              "
+                  />
+                </span>
+
+                <span
+                  className="
+              text-[9px]
+              font-black
+              uppercase
+              tracking-[0.28em]
+              text-red-700
+              sm:text-[10px]
+            "
+                >
+                  Courses + Programs · 学ぶ
+                </span>
+              </div>
+
+              {/* Heading */}
+
+              <div className="overflow-visible">
+                <h1
+                  data-hero-title
+                  className="
+              max-w-[1000px]
+              text-[clamp(3.5rem,9vw,9.5rem)]
+              font-black
+              leading-[0.82]
+              tracking-[-0.075em]
+              text-[#171111]
+            "
+                >
+                  The language
+                  <br />
+                  <span className="relative inline-block">for what's</span>
+                  <br />
+                  <span
+                    className="
+                relative
+                inline-block
+                bg-gradient-to-r
+                from-[#8f1018]
+                via-red-500
+                to-[#8f1018]
+                bg-clip-text
+                text-transparent
+              "
+                  >
+                    next.
+                  </span>
+                </h1>
+              </div>
+
+              {/* Bottom mini-meta */}
+
+              <div
+                className="
+            mt-9
+            flex
+            flex-wrap
+            items-center
+            gap-x-5
+            gap-y-3
+            sm:mt-11
+          "
+              >
+                <span
+                  className="
+              text-[10px]
+              font-bold
+              uppercase
+              tracking-[0.22em]
+              text-black/45
+            "
+                >
+                  Japanese Language
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  className="h-1 w-1 rounded-full bg-red-600"
+                />
+
+                <span
+                  className="
+              text-[10px]
+              font-bold
+              uppercase
+              tracking-[0.22em]
+              text-black/45
+            "
+                >
+                  JLPT Preparation
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  className="h-1 w-1 rounded-full bg-red-600"
+                />
+
+                <span
+                  className="
+              text-[10px]
+              font-bold
+              uppercase
+              tracking-[0.22em]
+              text-black/45
+            "
+                >
+                  Japan Pathway
+                </span>
+              </div>
+            </div>
+
+            {/* =================================================
+          RIGHT CONTENT
+      ================================================== */}
 
             <div
-              data-hero-eyebrow
-              className="mb-6 flex items-center gap-3"
+              data-hero-description
+              className="
+          w-full
+          lg:justify-self-end
+          lg:pb-2
+        "
             >
-              <span className="relative flex h-3 w-3">
-                <span className="absolute inset-0 animate-ping rounded-full bg-red-600 opacity-40" />
+              {/* Description */}
 
-                <span className="relative h-3 w-3 rounded-full bg-red-600" />
-              </span>
-
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-red-600">
-                Courses + programs · 学ぶ
-              </span>
-            </div>
-
-            {/* Heading */}
-
-            <div className="overflow-hidden [perspective:1000px]">
-              <h1
-                data-hero-title
-                className="max-w-5xl text-[clamp(3.5rem,9vw,9rem)] font-black leading-[0.82] tracking-[-0.08em]"
+              <p
+                className="
+            max-w-xl
+            text-[1.05rem]
+            font-medium
+            leading-[1.55]
+            tracking-[-0.025em]
+            text-neutral-700
+            sm:text-xl
+            lg:text-[1.4rem]
+            lg:leading-[1.45]
+          "
               >
-                The language
-                <br />
-                for what&apos;s
-                <br />
+                A structured route from the first character to the Japanese you
+                need for school, interviews, work, and a life that feels like
+                your own.
+              </p>
 
-                <span className="bg-gradient-to-r from-red-600 via-red-500 to-red-600 bg-clip-text text-transparent">
-                  next.
-                </span>
-              </h1>
+              {/* =================================================
+            FLOATING INFO CARD
+        ================================================== */}
+
+              <div
+                className="
+            mt-8
+            w-full
+            max-w-md
+            overflow-hidden
+            rounded-[1.5rem]
+            border
+            border-black/10
+            bg-white/85
+            p-5
+            shadow-[0_25px_80px_rgba(0,0,0,0.12)]
+            backdrop-blur-xl
+            sm:mt-10
+            sm:p-6
+          "
+              >
+                <div className="flex items-start justify-between gap-5">
+                  <div>
+                    <span
+                      className="
+                  text-[9px]
+                  font-black
+                  uppercase
+                  tracking-[0.25em]
+                  text-red-600
+                "
+                    >
+                      Built around your goal
+                    </span>
+
+                    <h2
+                      className="
+                  mt-2
+                  text-xl
+                  font-black
+                  tracking-tight
+                  text-[#171111]
+                  sm:text-2xl
+                "
+                    >
+                      Learn. Prepare. Go.
+                    </h2>
+                  </div>
+
+                  <span
+                    className="
+                flex
+                h-10
+                w-10
+                shrink-0
+                items-center
+                justify-center
+                rounded-full
+                bg-[#8f1018]
+                text-lg
+                text-white
+              "
+                  >
+                    ↗
+                  </span>
+                </div>
+
+                <div
+                  className="
+              mt-5
+              grid
+              grid-cols-3
+              divide-x
+              divide-black/10
+              border-t
+              border-black/10
+              pt-5
+            "
+                >
+                  <div className="pr-3">
+                    <span
+                      className="
+                  block
+                  text-xl
+                  font-black
+                  tracking-tight
+                "
+                    >
+                      N5
+                    </span>
+
+                    <span
+                      className="
+                  mt-1
+                  block
+                  text-[9px]
+                  font-bold
+                  uppercase
+                  tracking-[0.12em]
+                  text-black/40
+                "
+                    >
+                      Beginner
+                    </span>
+                  </div>
+
+                  <div className="px-3">
+                    <span
+                      className="
+                  block
+                  text-xl
+                  font-black
+                  tracking-tight
+                "
+                    >
+                      N3
+                    </span>
+
+                    <span
+                      className="
+                  mt-1
+                  block
+                  text-[9px]
+                  font-bold
+                  uppercase
+                  tracking-[0.12em]
+                  text-black/40
+                "
+                    >
+                      Progress
+                    </span>
+                  </div>
+
+                  <div className="pl-3">
+                    <span
+                      className="
+                  block
+                  text-xl
+                  font-black
+                  tracking-tight
+                "
+                    >
+                      N1
+                    </span>
+
+                    <span
+                      className="
+                  mt-1
+                  block
+                  text-[9px]
+                  font-bold
+                  uppercase
+                  tracking-[0.12em]
+                  text-black/40
+                "
+                    >
+                      Advanced
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Description */}
+          {/* =================================================
+        BOTTOM EDGE
+    ================================================== */}
 
           <div
-            data-hero-description
-            className="max-w-xl lg:justify-self-end"
+            className="
+        mt-16
+        flex
+        items-center
+        justify-between
+        border-t
+        border-black/10
+        pt-5
+        sm:mt-20
+        lg:mt-24
+      "
           >
-            <p className="text-lg font-medium leading-[1.5] tracking-[-0.02em] text-neutral-600 sm:text-xl lg:text-2xl">
-              A structured route from the first character to the
-              Japanese you need for school, interviews, work, and a
-              life that feels like your own.
-            </p>
+            <span
+              className="
+          text-[9px]
+          font-black
+          uppercase
+          tracking-[0.25em]
+          text-black/35
+        "
+            >
+              RSP in Japan
+            </span>
+
+            <div className="flex items-center gap-3">
+              <span
+                className="
+            h-px
+            w-8
+            bg-black/20
+            sm:w-14
+          "
+              />
+
+              <span
+                className="
+            text-[9px]
+            font-black
+            uppercase
+            tracking-[0.25em]
+            text-black/35
+          "
+              >
+                01 / Courses
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* ========================================================
           UPCOMING COURSES
@@ -875,15 +1354,12 @@ export default function Courses() {
 
               <h2 className="mt-5 max-w-2xl text-[clamp(2.5rem,6vw,5rem)] font-black leading-[0.9] tracking-[-0.065em]">
                 Your next{" "}
-                <span className="text-white/35">
-                  chapter starts here.
-                </span>
+                <span className="text-white/35">chapter starts here.</span>
               </h2>
 
               <p className="mt-6 max-w-xl text-sm leading-7 text-white/40 sm:text-base">
-                Explore our upcoming Japanese language programs and
-                choose the right starting point for your journey to
-                Japan.
+                Explore our upcoming Japanese language programs and choose the
+                right starting point for your journey to Japan.
               </p>
             </div>
 
@@ -916,10 +1392,7 @@ export default function Courses() {
 
           {/* Swiper */}
 
-          <div
-            data-upcoming-card
-            className="relative"
-          >
+          <div data-upcoming-card className="relative">
             <Swiper
               modules={[Autoplay, Pagination]}
               slidesPerView={1}
@@ -1022,8 +1495,7 @@ export default function Courses() {
 
                     <div className="relative z-10 mt-10">
                       <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-white/25">
-                        Level{" "}
-                        {String(index + 1).padStart(2, "0")}
+                        Level {String(index + 1).padStart(2, "0")}
                       </p>
 
                       <h3 className="mt-2 text-4xl font-black tracking-[-0.06em] sm:text-5xl">
@@ -1199,23 +1671,18 @@ export default function Courses() {
               <br />
               of Japanese
               <br />
-
               <span className="bg-gradient-to-r from-neutral-400 to-neutral-300 bg-clip-text text-transparent">
                 you are ready for.
               </span>
             </h2>
 
             <p className="mt-6 max-w-sm text-sm leading-7 text-neutral-500">
-              Start where you are. Move at a pace you can sustain.
-              Ask about fees, placement, and the best fit for your
-              goal.
+              Start where you are. Move at a pace you can sustain. Ask about
+              fees, placement, and the best fit for your goal.
             </p>
           </div>
 
-          <div
-            data-course-grid
-            className="grid gap-3 sm:grid-cols-2"
-          >
+          <div data-course-grid className="grid gap-3 sm:grid-cols-2">
             {courses.map((course) => {
               const active = activeCourse === course.id;
 
@@ -1234,9 +1701,7 @@ export default function Courses() {
                   <div className="flex items-start justify-between">
                     <span
                       className={`text-4xl font-black tracking-[-0.07em] ${
-                        active
-                          ? "text-white"
-                          : "text-neutral-950"
+                        active ? "text-white" : "text-neutral-950"
                       }`}
                     >
                       {course.id}
@@ -1244,9 +1709,7 @@ export default function Courses() {
 
                     <span
                       className={`text-[9px] font-bold tracking-[0.2em] ${
-                        active
-                          ? "text-white/60"
-                          : "text-neutral-300"
+                        active ? "text-white/60" : "text-neutral-300"
                       }`}
                     >
                       {course.number}
@@ -1256,9 +1719,7 @@ export default function Courses() {
                   <div className="mt-8">
                     <p
                       className={`text-[9px] font-bold uppercase tracking-[0.2em] ${
-                        active
-                          ? "text-white/70"
-                          : "text-neutral-400"
+                        active ? "text-white/70" : "text-neutral-400"
                       }`}
                     >
                       {course.duration} · {course.hours}
@@ -1270,9 +1731,7 @@ export default function Courses() {
 
                     <p
                       className={`mt-3 text-xs leading-6 ${
-                        active
-                          ? "text-white/80"
-                          : "text-neutral-500"
+                        active ? "text-white/80" : "text-neutral-500"
                       }`}
                     >
                       {course.description}
@@ -1321,7 +1780,6 @@ export default function Courses() {
                 <br />
                 fits your
                 <br />
-
                 <span className="bg-gradient-to-r from-neutral-400 to-neutral-300 bg-clip-text text-transparent">
                   real life.
                 </span>
@@ -1378,7 +1836,6 @@ export default function Courses() {
             <h2 className="mt-5 max-w-md text-4xl font-black leading-[0.92] tracking-[-0.06em] sm:text-5xl">
               Practice for the exam.
               <br />
-
               <span className="bg-gradient-to-r from-neutral-400 to-neutral-300 bg-clip-text text-transparent">
                 Prepare for the person you become.
               </span>
@@ -1458,9 +1915,8 @@ export default function Courses() {
 
             <div data-reveal>
               <p className="text-lg leading-7 text-white/80 sm:text-xl">
-                Know what the exam is asking. Learn how to manage
-                time, recognize patterns, and turn a practice score
-                into a next step.
+                Know what the exam is asking. Learn how to manage time,
+                recognize patterns, and turn a practice score into a next step.
               </p>
 
               <Link
@@ -1468,7 +1924,6 @@ export default function Courses() {
                 className="group mt-8 inline-flex items-center gap-3 rounded-full bg-white px-6 py-4 text-[9px] font-black uppercase tracking-[0.2em] text-red-600 shadow-2xl shadow-white/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-red-600/50"
               >
                 Ask about preparation
-
                 <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:rotate-45">
                   ↗
                 </span>
@@ -1499,7 +1954,6 @@ export default function Courses() {
             <h2 className="mt-5 text-4xl font-black leading-[0.92] tracking-[-0.06em] sm:text-5xl">
               One clear direction.
               <br />
-
               <span className="bg-gradient-to-r from-neutral-400 to-neutral-300 bg-clip-text text-transparent">
                 Many meaningful milestones.
               </span>
@@ -1580,62 +2034,210 @@ export default function Courses() {
       {/* ========================================================
           FINAL CTA
       ======================================================== */}
-
-      <section
-        data-final-cta
-        className="px-3 pb-3 sm:px-6 sm:pb-6 lg:px-8"
-      >
-        <div className="group relative mx-auto max-w-[1500px] overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-neutral-950 via-[#0A0A0A] to-neutral-950 px-6 py-16 text-white shadow-2xl shadow-black/30 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+      <section data-final-cta className="px-3 pb-3 sm:px-6 sm:pb-6 lg:px-8">
+        <div className="group relative mx-auto max-w-[1500px] overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-neutral-950 via-[#0a0a0a] to-neutral-950 px-5 py-12 text-white shadow-2xl shadow-black/40 sm:px-8 sm:py-16 lg:px-14 lg:py-20 xl:px-16">
           {/* Decorative rings */}
+          <div className="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full border border-red-500/10 transition-transform duration-1000 group-hover:scale-110" />
 
-          <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full border-2 border-red-600/20 transition-transform duration-700 group-hover:scale-110" />
+          <div className="pointer-events-none absolute -bottom-40 -left-40 h-[420px] w-[420px] rounded-full border border-red-500/10 transition-transform duration-1000 group-hover:scale-110" />
 
-          <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full border-2 border-red-600/15 transition-transform duration-700 group-hover:scale-110" />
+          {/* Background glow */}
+          <div className="pointer-events-none absolute inset-0 overflow-hidden">
+            <div className="absolute -right-32 top-0 h-[500px] w-[500px] rounded-full bg-red-600/[0.08] blur-[150px]" />
 
-          {/* Glow */}
+            <div className="absolute -bottom-40 left-0 h-[400px] w-[400px] rounded-full bg-red-500/[0.06] blur-[130px]" />
 
-          <div className="pointer-events-none absolute inset-0">
-            <div className="absolute -right-40 top-20 h-[400px] w-[400px] rounded-full bg-red-600/10 blur-[120px]" />
-
-            <div className="absolute -bottom-40 left-[-10%] h-[350px] w-[350px] rounded-full bg-red-500/[0.08] blur-[100px]" />
+            <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/[0.025] blur-[180px]" />
           </div>
 
-          <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_0.6fr] lg:items-end">
-            <div data-cta-content>
-              <div className="flex items-center gap-3">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-red-500" />
+          {/* Main content */}
+          <div className="relative z-10 grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 xl:gap-20">
+            {/* =====================================================
+          LEFT CONTENT
+      ====================================================== */}
+            <div data-cta-content className="max-w-2xl">
+              {/* Eyebrow */}
+              <div className="inline-flex items-center gap-3 rounded-full border border-red-500/20 bg-red-500/[0.06] px-3.5 py-2 backdrop-blur-sm">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-50" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
+                </span>
 
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-red-500">
-                  Your next step
+                <span className="text-[9px] font-bold uppercase tracking-[0.28em] text-red-300 sm:text-[10px]">
+                  From N5 to N4 — and beyond
                 </span>
               </div>
 
-              <h2 className="mt-5 max-w-4xl text-[clamp(3rem,7vw,7rem)] font-black leading-[0.84] tracking-[-0.08em] drop-shadow-2xl">
-                Start where
+              {/* Heading */}
+              <h2 className="mt-7 max-w-3xl text-[clamp(2.6rem,5vw,5.3rem)] font-black leading-[0.88] tracking-[-0.055em]">
+                Learn Japanese
                 <br />
-                you are.
-                <br />
-
-                <span className="bg-gradient-to-r from-white via-white/70 to-white/40 bg-clip-text text-transparent">
-                  Go further.
+                <span className="bg-gradient-to-r from-red-500 via-red-400 to-white bg-clip-text text-transparent">
+                  the right way.
                 </span>
+                <br />
+                <span className="text-white">Built for real results.</span>
               </h2>
-            </div>
 
-            <div data-cta-content>
-              <p className="max-w-md text-sm leading-7 text-white/50">
-                Tell us where you are with Japanese and where you
-                want to go. We&apos;ll help you find the course and
-                format that makes sense.
+              {/* Description */}
+              <p className="mt-7 max-w-xl text-sm leading-7 text-white/60 sm:text-[15px] sm:leading-7">
+                Our N5 and N4 courses are designed by JLPT-certified instructors
+                who know exactly what the exam tests — and how to teach it so it
+                sticks. Clear structure, focused practice, and a team that
+                actually cares about your progress.
               </p>
 
+              {/* Stats */}
+              <div className="mt-9 grid max-w-xl grid-cols-3 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] backdrop-blur-sm">
+                {/* Stat */}
+                <div className="border-r border-white/10 px-3 py-4 sm:px-5">
+                  <div className="text-[8px] font-bold uppercase tracking-[0.2em] text-white/40 sm:text-[9px]">
+                    Students
+                  </div>
+
+                  <div className="mt-1.5 text-xl font-black tracking-tight text-white sm:text-2xl">
+                    2,500+
+                  </div>
+                </div>
+
+                {/* Stat */}
+                <div className="border-r border-white/10 px-3 py-4 sm:px-5">
+                  <div className="text-[8px] font-bold uppercase tracking-[0.2em] text-white/40 sm:text-[9px]">
+                    Pass rate
+                  </div>
+
+                  <div className="mt-1.5 text-xl font-black tracking-tight text-white sm:text-2xl">
+                    92%
+                  </div>
+                </div>
+
+                {/* Stat */}
+                <div className="px-3 py-4 sm:px-5">
+                  <div className="text-[8px] font-bold uppercase tracking-[0.2em] text-white/40 sm:text-[9px]">
+                    Instructors
+                  </div>
+
+                  <div className="mt-1.5 text-xl font-black tracking-tight text-white sm:text-2xl">
+                    15+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* =====================================================
+          RIGHT VISUAL AREA
+      ====================================================== */}
+            <div data-cta-content className="relative">
+              {/* Image composition */}
+              <div className="grid grid-cols-[1.35fr_0.65fr] gap-3 sm:gap-4">
+                {/* ================================================
+              LARGE FEATURE IMAGE
+          ================================================= */}
+                <figure className="group/img relative min-h-[420px] overflow-hidden rounded-[1.75rem] bg-neutral-900 ring-1 ring-white/10 sm:min-h-[500px] lg:min-h-[540px]">
+                  <img
+                    src="/changes/download (6).jpg.jpeg"
+                    alt="N5 and N4 Japanese classes in session"
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-1000 ease-out group-hover/img:scale-105"
+                  />
+
+                  {/* Image overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent opacity-90" />
+
+                  {/* Top badge */}
+                  <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-black/40 px-3 py-1.5 text-[8px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md sm:left-5 sm:top-5 sm:text-[9px]">
+                    Core course
+                  </div>
+
+                  {/* Bottom content */}
+                  <div className="absolute bottom-5 left-5 right-5 sm:bottom-7 sm:left-7 sm:right-7">
+                    <div className="mb-2 h-px w-8 bg-red-500" />
+
+                    <h3 className="text-lg font-black tracking-tight text-white sm:text-xl">
+                      N5 & N4 Classes
+                    </h3>
+
+                    <p className="mt-1.5 max-w-xs text-[10px] leading-5 text-white/70 sm:text-[11px]">
+                      JLPT-focused lessons designed around the skills you
+                      actually need for the exam.
+                    </p>
+                  </div>
+                </figure>
+
+                {/* ================================================
+              SMALL IMAGE COLUMN
+          ================================================= */}
+                <div className="grid grid-rows-2 gap-3 sm:gap-4">
+                  {/* Image 2 */}
+                  <figure className="group/img relative min-h-0 overflow-hidden rounded-[1.5rem] bg-neutral-900 ring-1 ring-white/10">
+                    <img
+                      src="/changes/download (7).jpg.jpeg"
+                      alt="Certified Japanese teachers teaching students"
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ease-out group-hover/img:scale-110"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                    <div className="absolute left-3 top-3 rounded-full border border-red-500/20 bg-red-500/10 px-2 py-1 text-[7px] font-bold uppercase tracking-[0.18em] text-red-300 backdrop-blur-md">
+                      Expert-led
+                    </div>
+
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-[11px] font-black uppercase tracking-[0.12em] text-white">
+                        Certified Teachers
+                      </h3>
+
+                      <p className="mt-1 text-[9px] leading-4 text-white/65">
+                        Learn directly from experienced instructors.
+                      </p>
+                    </div>
+                  </figure>
+
+                  {/* Image 3 */}
+                  <figure className="group/img relative min-h-0 overflow-hidden rounded-[1.5rem] bg-neutral-900 ring-1 ring-white/10">
+                    <img
+                      src="/changes/download (8).jpg (1).jpeg"
+                      alt="Students celebrating JLPT success and progress"
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ease-out group-hover/img:scale-110"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                    <div className="absolute left-3 top-3 rounded-full border border-red-500/20 bg-red-500/10 px-2 py-1 text-[7px] font-bold uppercase tracking-[0.18em] text-red-300 backdrop-blur-md">
+                      Proven results
+                    </div>
+
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-[11px] font-black uppercase tracking-[0.12em] text-white">
+                        Real Results
+                      </h3>
+
+                      <p className="mt-1 text-[9px] leading-4 text-white/65">
+                        Build confidence and move forward.
+                      </p>
+                    </div>
+                  </figure>
+                </div>
+              </div>
+
+              {/* =================================================
+            CTA
+        ================================================== */}
               <Link
                 to="/contact"
-                className="group/cta mt-7 inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-red-600 to-red-500 px-6 py-4 text-[9px] font-black uppercase tracking-[0.2em] text-white shadow-2xl shadow-red-600/40 transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-red-600/60"
+                className="group/cta relative mt-5 flex w-full items-center justify-between overflow-hidden rounded-full border border-red-400/20 bg-gradient-to-r from-red-600 to-red-500 px-6 py-4 text-[10px] font-black uppercase tracking-[0.2em] text-white shadow-2xl shadow-red-600/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-red-600/40 sm:px-7 sm:py-5"
               >
-                Find my course
+                {/* Shine */}
+                <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-700 group-hover/cta:translate-x-full" />
 
-                <span className="transition-transform duration-300 group-hover/cta:translate-x-2 group-hover/cta:rotate-45">
+                <span className="relative">Start your N5 / N4 journey</span>
+
+                <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm text-red-600 transition-transform duration-300 group-hover/cta:rotate-45">
                   ↗
                 </span>
               </Link>
