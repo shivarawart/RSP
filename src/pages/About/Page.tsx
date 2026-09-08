@@ -544,7 +544,7 @@ export default function AboutUs() {
               className="h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105"
             >
               <source
-                src="/changes/video_7bdd68e2b867.mp4"
+                src="changes/video_7bdd68e2b867.mp4"
                 type="video/mp4"
               />
             </video>
