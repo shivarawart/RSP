@@ -287,14 +287,14 @@ export default function Navbar() {
                 ${redMode ? "text-white" : "text-[#180607]"}
               `}
             >
-              RSP
+              RSP In Japan
             </span>
 
             <span className="mx-1 sm:mx-2 text-[10px] sm:text-[11px] font-medium text-[#E60012]">
-              /
+            
             </span>
 
-            <span
+            {/* <span
               className={`
                 text-[8px] sm:text-[9px]
                 font-semibold
@@ -306,7 +306,7 @@ export default function Navbar() {
               `}
             >
               in Japan
-            </span>
+            </span> */}
           </Link>
 
           {/* =====================================
@@ -551,12 +551,12 @@ export default function Navbar() {
                   </span>
 
                   {/* Arrow */}
-                  <span
+                  {/* <span
                     aria-hidden="true"
                     className="ml-auto text-lg text-white/40 transition-all duration-300 group-hover:translate-x-1 group-hover:text-white"
                   >
                     ↗
-                  </span>
+                  </span> */}
                 </Link>
               );
             })}

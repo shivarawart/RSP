@@ -538,10 +538,10 @@ export default function WhyRSP() {
                     {result.text}
                   </p>
 
-                  <MoveUpRight
+                  {/* <MoveUpRight
                     size={18}
                     className="mt-1 shrink-0 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
-                  />
+                  /> */}
                 </div>
               </article>
             ))}
