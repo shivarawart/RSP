@@ -537,7 +537,9 @@ export default function WhyRSP() {
                   <p className="text-sm leading-6 text-white/60">
                     {result.text}
                   </p>
-
+                  {/* <div className="flex h-10 w-10 items-center justify-center border-2 hover:bg-blue-100 rounded-2xl border-[rgb(253,253,253)] text-[#000000] hover:bg-red-600 "> */}
+              <ArrowUpRight size={28} strokeWidth={1.5} className="black"/>
+            {/* </div> */}
                   {/* <MoveUpRight
                     size={18}
                     className="mt-1 shrink-0 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"

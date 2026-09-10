@@ -445,37 +445,32 @@ export default function AboutUs() {
     <section
       ref={rootRef}
       id="about"
-      className="relative overflow-hidden bg-gradient-to-b from-white via-[#FEF2F2]/40 to-white text-neutral-950"
+      className="relative overflow-hidden bg-white text-neutral-950"
     >
-      {/* =========================================================
-          CURSOR GLOW
-      ========================================================= */}
-
+      {/* Cursor glow */}
       <div
         ref={cursorGlowRef}
         aria-hidden="true"
-        className="pointer-events-none fixed left-0 top-0 z-50 hidden h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-red-500/15 to-red-600/8 blur-3xl lg:block"
+        className="pointer-events-none fixed left-0 top-0 z-50 hidden h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/10 blur-3xl lg:block"
       />
 
-      {/* Decorative background elements */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -right-40 top-20 h-[600px] w-[600px] rounded-full bg-red-500/[0.03] blur-[140px]" />
-        <div className="absolute -bottom-40 left-[-10%] h-[500px] w-[500px] rounded-full bg-red-600/[0.02] blur-[120px]" />
+      {/* Background decoration */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+      >
+        <div className="absolute -right-40 top-20 h-[520px] w-[520px] rounded-full bg-red-500/[0.035] blur-[130px]" />
+        <div className="absolute -bottom-40 left-[-10%] h-[450px] w-[450px] rounded-full bg-red-600/[0.025] blur-[110px]" />
       </div>
 
-      {/* =========================================================
-          INTRO / HERO
-      ========================================================= */}
-
+      {/* Intro */}
       <div
         data-intro-section
-        className="relative mx-auto max-w-7xl px-5 pb-16 pt-20 sm:px-8 sm:pb-20 sm:pt-24 lg:px-10 lg:pb-24 lg:pt-28"
+        className="relative mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6 sm:pb-14 sm:pt-20 lg:px-8 lg:pb-16 lg:pt-24"
       >
-        <div className="grid items-end gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          {/* Left: Eyebrow + Title */}
+        <div className="grid items-end gap-0 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            {/* Eyebrow */}
-            <div data-eyebrow className="mb-6 flex items-center gap-3">
+            <div data-eyebrow className="mb-5 flex items-center gap-3">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="absolute inset-0 animate-ping rounded-full bg-red-600 opacity-40" />
                 <span className="relative h-2.5 w-2.5 rounded-full bg-red-600" />
@@ -486,9 +481,8 @@ export default function AboutUs() {
               </span>
             </div>
 
-            {/* Title */}
             <h2
-              className="max-w-3xl overflow-hidden text-[clamp(2.6rem,6.5vw,6rem)] font-black leading-[0.9] tracking-[-0.065em] text-neutral-900"
+              className="max-w-3xl overflow-hidden text-[clamp(2.6rem,6.5vw,6rem)] font-black leading-[0.88] tracking-[-0.065em] text-neutral-900"
               style={{ perspective: "900px" }}
             >
               <span data-title-line className="block">
@@ -504,16 +498,14 @@ export default function AboutUs() {
             </h2>
           </div>
 
-          {/* Right: Intro text */}
           <div data-intro className="max-w-xl lg:justify-self-end">
             <p className="text-base font-medium leading-[1.55] tracking-[-0.01em] text-neutral-700 sm:text-lg lg:text-xl">
               RSP in Japan began with a simple belief: students deserve an
-              honest, human bridge between where they are and the life they’re
+              honest, human bridge between where they are and the life they are
               working toward.
             </p>
 
-            {/* Divider + Label */}
-            <div className="mt-7 flex items-center gap-3">
+            <div className="mt-5 flex items-center gap-3">
               <span className="h-px w-10 bg-gradient-to-r from-red-600 to-transparent" />
               <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-400">
                 About the company
@@ -523,15 +515,12 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* =========================================================
-          CINEMATIC BANNER
-      ========================================================= */}
-
-      <div className="mx-auto max-w-[1500px] px-3 sm:px-6 lg:px-8">
+      {/* Cinematic banner */}
+      <div className="mx-auto max-w-[1500px] px-2 sm:px-4 lg:px-6">
         <div
           ref={heroImageRef}
           data-image-container
-          className="group relative h-[430px] overflow-hidden rounded-[2rem] bg-neutral-950 shadow-2xl shadow-black/20 sm:h-[520px] lg:h-[620px]"
+          className="group relative h-[430px] overflow-hidden rounded-[1.75rem] bg-neutral-950 shadow-2xl shadow-black/20 sm:h-[520px] lg:h-[620px]"
         >
           <div data-image className="absolute inset-[-5%] h-[110%] w-[110%]">
             <video
@@ -543,21 +532,16 @@ export default function AboutUs() {
               poster="/images/about-poster.jpg"
               className="h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105"
             >
-              <source
-                src="changes/video_7bdd68e2b867.mp4"
-                type="video/mp4"
-              />
+              <source src="/changes/video_7bdd68e2b867.mp4" type="video/mp4" />
             </video>
           </div>
 
-          {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-red-950/80 via-black/40 to-black/80" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(220,38,38,0.35),transparent_40%)]" />
 
-          {/* Content */}
           <div className="relative z-10 flex h-full flex-col justify-between p-6 sm:p-10 lg:p-14">
-            <div className="flex items-start justify-between gap-5">
-              <span className="rounded-full border border-white/25 bg-white/15 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.25em] text-white backdrop-blur-md shadow-lg">
+            <div className="flex items-start justify-between">
+              <span className="rounded-full border border-white/25 bg-white/15 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.25em] text-white shadow-lg backdrop-blur-md">
                 RSP in Japan
               </span>
 
@@ -568,7 +552,7 @@ export default function AboutUs() {
 
             <div className="max-w-4xl">
               <p className="mb-4 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-red-300">
-                <span className="h-1.5 w-1.5 rounded-full bg-red-400 animate-pulse" />
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-400" />
                 From intention to movement
               </p>
 
@@ -584,44 +568,39 @@ export default function AboutUs() {
             </div>
           </div>
 
-          {/* Progress line */}
           <div className="absolute bottom-0 left-0 right-0 z-20 h-px bg-white/25">
             <div className="h-full w-1/3 bg-gradient-to-r from-red-500 to-red-400" />
           </div>
 
-          {/* Corner accents */}
           <div className="absolute bottom-6 left-6 h-10 w-10 border-b-2 border-l-2 border-white/30" />
           <div className="absolute bottom-6 right-6 h-10 w-10 border-b-2 border-r-2 border-white/30" />
-          <div className="absolute top-6 left-6 h-10 w-10 border-t-2 border-l-2 border-white/30" />
-          <div className="absolute top-6 right-6 h-10 w-10 border-t-2 border-r-2 border-white/30" />
+          <div className="absolute left-6 top-6 h-10 w-10 border-l-2 border-t-2 border-white/30" />
+          <div className="absolute right-6 top-6 h-10 w-10 border-r-2 border-t-2 border-white/30" />
         </div>
       </div>
 
-      {/* =========================================================
-          COMPANY STORY
-      ========================================================= */}
-
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
-        <div className="grid gap-12 lg:grid-cols-[0.55fr_1fr] lg:gap-24">
+      {/* Company story */}
+      <div className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+        <div className="grid gap-0 lg:grid-cols-[0.55fr_1fr]">
           <div data-story-block>
             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-red-600">
               About the company
             </span>
 
-            <h3 className="mt-5 max-w-md text-4xl font-black leading-[0.95] tracking-[-0.055em] sm:text-5xl">
+            <h3 className="mt-4 max-w-md text-4xl font-black leading-[0.95] tracking-[-0.055em] sm:text-5xl">
               Five years of turning intention into movement.
             </h3>
           </div>
 
-          <div data-story-block className="max-w-3xl">
+          <div data-story-block className="max-w-3xl lg:pl-12">
             <p className="text-xl font-medium leading-[1.5] tracking-[-0.025em] text-neutral-700 sm:text-2xl">
               Founded in 2020, RSP in Japan has helped more than 50 students
               move toward Yokohama language school, JLPT progression from N3 to
               N1, and new work possibilities in Japan.
             </p>
 
-            <div className="mt-10 grid grid-cols-2 gap-6 border-t border-neutral-200 pt-6 sm:grid-cols-3">
-              <div className="group">
+            <div className="mt-8 grid grid-cols-2 border-t border-neutral-200 pt-5 sm:grid-cols-3">
+              <div className="group border-r border-neutral-200 pr-4">
                 <p className="text-3xl font-black tracking-[-0.05em] text-neutral-900 transition-colors duration-300 group-hover:text-red-600">
                   2020
                 </p>
@@ -630,7 +609,7 @@ export default function AboutUs() {
                 </p>
               </div>
 
-              <div className="group">
+              <div className="group border-r border-neutral-200 px-4">
                 <p className="text-3xl font-black tracking-[-0.05em] text-neutral-900 transition-colors duration-300 group-hover:text-red-600">
                   50+
                 </p>
@@ -639,9 +618,9 @@ export default function AboutUs() {
                 </p>
               </div>
 
-              <div className="group">
+              <div className="group px-4">
                 <p className="text-3xl font-black tracking-[-0.05em] text-neutral-900 transition-colors duration-300 group-hover:text-red-600">
-                  N3 → N1
+                  N5 → N1
                 </p>
                 <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.2em] text-neutral-400">
                   Progression
@@ -652,21 +631,102 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* =========================================================
-          TIMELINE
-      ========================================================= */}
+      {/* New pathway strip */}
+      <div className="relative overflow-hidden border-y border-red-100 bg-[#fff8f8]">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+          <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-red-600">
+                The Japan pathway
+              </span>
 
+              <h3 className="mt-3 max-w-2xl text-4xl font-black leading-[0.92] tracking-[-0.06em] text-neutral-900 sm:text-5xl">
+                A clearer route from learning to living.
+              </h3>
+            </div>
+
+            <p className="max-w-sm text-sm leading-6 text-neutral-500">
+              Every stage is designed to make the next decision more confident,
+              practical, and achievable.
+            </p>
+          </div>
+
+          <div className="grid gap-0 overflow-hidden rounded-2xl border border-red-100 bg-white shadow-xl shadow-red-900/5 md:grid-cols-3">
+            <article className="group relative border-b border-red-100 p-6 transition-colors duration-500 hover:bg-red-600 md:border-b-0 md:border-r">
+              <div className="mb-12 flex items-center justify-between">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-xs font-black text-white transition-colors duration-500 group-hover:bg-white group-hover:text-red-600">
+                  01
+                </span>
+                <span className="text-2xl text-red-200 transition-colors duration-500 group-hover:text-white/40">
+                  →
+                </span>
+              </div>
+
+              <h4 className="text-2xl font-black tracking-[-0.05em] text-neutral-900 transition-colors duration-500 group-hover:text-white">
+                Learn
+              </h4>
+
+              <p className="mt-3 text-sm leading-6 text-neutral-500 transition-colors duration-500 group-hover:text-white/70">
+                Build the Japanese language foundation with structure,
+                consistency, and personal guidance.
+              </p>
+            </article>
+
+            <article className="group relative border-b border-red-100 p-6 transition-colors duration-500 hover:bg-red-600 md:border-b-0 md:border-r">
+              <div className="mb-12 flex items-center justify-between">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-xs font-black text-white transition-colors duration-500 group-hover:bg-white group-hover:text-red-600">
+                  02
+                </span>
+                <span className="text-2xl text-red-200 transition-colors duration-500 group-hover:text-white/40">
+                  →
+                </span>
+              </div>
+
+              <h4 className="text-2xl font-black tracking-[-0.05em] text-neutral-900 transition-colors duration-500 group-hover:text-white">
+                Prepare
+              </h4>
+
+              <p className="mt-3 text-sm leading-6 text-neutral-500 transition-colors duration-500 group-hover:text-white/70">
+                Navigate school applications, JLPT progression, documentation,
+                and cultural preparation.
+              </p>
+            </article>
+
+            <article className="group relative p-6 transition-colors duration-500 hover:bg-red-600">
+              <div className="mb-12 flex items-center justify-between">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-xs font-black text-white transition-colors duration-500 group-hover:bg-white group-hover:text-red-600">
+                  03
+                </span>
+                <span className="text-2xl text-red-200 transition-colors duration-500 group-hover:text-white/40">
+                  ↗
+                </span>
+              </div>
+
+              <h4 className="text-2xl font-black tracking-[-0.05em] text-neutral-900 transition-colors duration-500 group-hover:text-white">
+                Move forward
+              </h4>
+
+              <p className="mt-3 text-sm leading-6 text-neutral-500 transition-colors duration-500 group-hover:text-white/70">
+                Take the next step toward studying, working, and building a life
+                in Japan.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      {/* Timeline */}
       <div className="relative bg-gradient-to-b from-neutral-50 via-white to-neutral-50">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
-          <div className="mb-16 max-w-2xl">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+          <div className="mb-12 max-w-2xl">
             <div className="flex items-center gap-3">
-              <span className="h-2 w-2 rounded-full bg-red-600 animate-pulse" />
+              <span className="h-2 w-2 animate-pulse rounded-full bg-red-600" />
               <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-red-600">
                 The journey
               </span>
             </div>
 
-            <h3 className="mt-5 text-4xl font-black leading-[0.95] tracking-[-0.06em] sm:text-6xl">
+            <h3 className="mt-4 text-4xl font-black leading-[0.95] tracking-[-0.06em] sm:text-6xl">
               Every step
               <br />
               <span className="bg-gradient-to-r from-neutral-400 to-neutral-300 bg-clip-text text-transparent">
@@ -676,25 +736,23 @@ export default function AboutUs() {
           </div>
 
           <div className="relative">
-            {/* Timeline rail */}
-            <div className="absolute bottom-0 left-[5px] top-0 w-px bg-gradient-to-b from-neutral-200 via-neutral-300 to-neutral-200 sm:left-[7px]">
+            <div className="absolute bottom-0 left-[6px] top-0 w-px bg-gradient-to-b from-neutral-200 via-neutral-300 to-neutral-200 sm:left-[8px]">
               <div
                 ref={timelineLineRef}
                 className="h-full w-full origin-top bg-gradient-to-b from-red-600 to-red-500"
               />
             </div>
 
-            <div className="space-y-12 sm:space-y-16">
+            <div className="space-y-8 sm:space-y-10">
               {timeline.map((item, index) => (
                 <div
                   key={item.year}
                   data-timeline-item
-                  className="relative grid gap-5 pl-8 sm:grid-cols-[130px_1fr] sm:gap-10 sm:pl-12"
+                  className="relative grid gap-3 pl-8 sm:grid-cols-[130px_1fr] sm:gap-8 sm:pl-12"
                 >
-                  {/* Marker */}
                   <div
                     data-marker
-                    className="absolute left-0 top-1 z-10 flex h-[14px] w-[14px] items-center justify-center rounded-full border-3 border-red-600 bg-white shadow-lg sm:h-[18px] sm:w-[18px]"
+                    className="absolute left-0 top-1 z-10 flex h-[14px] w-[14px] items-center justify-center rounded-full border-2 border-red-600 bg-white shadow-lg sm:h-[18px] sm:w-[18px]"
                   >
                     <span className="h-2 w-2 rounded-full bg-red-600 sm:h-2.5 sm:w-2.5" />
                   </div>
@@ -705,18 +763,18 @@ export default function AboutUs() {
 
                   <div
                     data-timeline-content
-                    className="group rounded-xl p-4 transition-all duration-300 hover:bg-red-50/50"
+                    className="group rounded-xl p-3 transition-all duration-300 hover:bg-red-50/50"
                   >
                     <h4 className="text-2xl font-black tracking-[-0.04em] text-neutral-900 sm:text-3xl">
                       {item.title}
                     </h4>
 
-                    <p className="mt-3 max-w-xl text-sm leading-7 text-neutral-500 sm:text-base">
+                    <p className="mt-2 max-w-xl text-sm leading-7 text-neutral-500 sm:text-base">
                       {item.description}
                     </p>
 
                     {index < timeline.length - 1 && (
-                      <div className="mt-4 h-px w-full bg-gradient-to-r from-red-200 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                      <div className="mt-3 h-px w-full bg-gradient-to-r from-red-200 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     )}
                   </div>
                 </div>
@@ -726,26 +784,24 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* =========================================================
-          VALUES
-      ========================================================= */}
-
+      {/* Values */}
       <div
         data-values
-        className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10"
+        className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8"
       >
-        <div className="mb-12 grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">
+        <div className="mb-10 grid gap-0 lg:grid-cols-[0.7fr_1.3fr]">
           <div>
             <div className="flex items-center gap-3">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-600 text-white">
                 <span className="text-sm font-bold">✦</span>
               </span>
+
               <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-red-600">
                 What we believe
               </span>
             </div>
 
-            <h3 className="mt-5 text-4xl font-black leading-[0.95] tracking-[-0.06em] sm:text-5xl">
+            <h3 className="mt-4 text-4xl font-black leading-[0.95] tracking-[-0.06em] sm:text-5xl">
               The values that
               <br />
               keep the path
@@ -756,7 +812,7 @@ export default function AboutUs() {
             </h3>
           </div>
 
-          <p className="max-w-xl self-end text-lg leading-relaxed text-neutral-500">
+          <p className="max-w-xl self-end text-lg leading-relaxed text-neutral-500 lg:pl-12">
             The journey to Japan is more than language. It requires consistency,
             cultural awareness, and the confidence to turn learning into a
             real-life ability.
@@ -768,64 +824,53 @@ export default function AboutUs() {
             <article
               key={value.number}
               data-value-card
-              className="group relative border-b border-neutral-200 px-0 py-8 transition-all duration-500 hover:bg-gradient-to-br hover:from-red-50/30 hover:to-transparent lg:border-b-0 lg:border-r lg:px-8 lg:py-10 first:lg:pl-0 last:lg:border-r-0"
+              className="group relative border-b border-neutral-200 px-0 py-7 transition-all duration-500 hover:bg-gradient-to-br hover:from-red-50/30 hover:to-transparent lg:border-b-0 lg:border-r lg:px-8 lg:py-8 first:lg:pl-0 last:lg:border-r-0"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-red-600 to-red-500 font-mono text-xs font-black tracking-[0.2em] text-white shadow-lg shadow-red-500/30 transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-red-500/40">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-red-600 to-red-500 font-mono text-xs font-black tracking-[0.2em] text-white shadow-lg shadow-red-500/30 transition-all duration-300 group-hover:scale-110">
                     {value.number}
                   </span>
+
                   <span className="text-[10px] font-black tracking-[0.2em] text-neutral-300 transition-colors duration-300 group-hover:text-red-600">
                     {value.number}
                   </span>
                 </div>
 
-                <span className="h-2.5 w-2.5 rounded-full bg-neutral-200 transition-all duration-500 group-hover:scale-150 group-hover:bg-red-600 group-hover:shadow-lg group-hover:shadow-red-500/50" />
+                <span className="h-2.5 w-2.5 rounded-full bg-neutral-200 transition-all duration-500 group-hover:scale-150 group-hover:bg-red-600" />
               </div>
 
-              <h4 className="mt-12 text-3xl font-black tracking-[-0.05em] text-neutral-900 transition-transform duration-500 group-hover:translate-x-2 group-hover:text-red-600">
+              <h4 className="mt-10 text-3xl font-black tracking-[-0.05em] text-neutral-900 transition-transform duration-500 group-hover:translate-x-2 group-hover:text-red-600">
                 {value.title}
               </h4>
 
-              <p className="mt-4 max-w-sm text-sm leading-7 text-neutral-500">
+              <p className="mt-3 max-w-sm text-sm leading-7 text-neutral-500">
                 {value.description}
               </p>
 
-              <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-gradient-to-r from-red-600 to-red-500 transition-all duration-700 ease-out group-hover:w-full lg:left-8 lg:right-8 lg:w-auto lg:origin-left lg:scale-x-0 lg:group-hover:scale-x-100" />
+              <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-gradient-to-r from-red-600 to-red-500 transition-all duration-700 group-hover:w-full lg:left-8 lg:right-8 lg:w-auto lg:origin-left lg:scale-x-0 lg:group-hover:scale-x-100" />
             </article>
           ))}
         </div>
       </div>
 
-      {/* =========================================================
-          FINAL BANNER
-      ========================================================= */}
-
-      <div className="px-3 pb-4 sm:px-6 sm:pb-6 lg:px-8">
-        <div className="group relative mx-auto min-h-[360px] max-w-[1500px] overflow-hidden rounded-[2rem] bg-gradient-to-br from-red-600 via-red-500 to-red-600 px-6 py-12 shadow-2xl shadow-red-500/30 sm:px-10 lg:min-h-[430px] lg:px-16">
-          {/* Animated background pattern */}
+      {/* Final banner */}
+      <div className="px-2 pb-3 sm:px-4 sm:pb-4 lg:px-6">
+        <div className="group relative mx-auto min-h-[360px] max-w-[1500px] overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-red-600 via-red-500 to-red-600 px-6 py-10 shadow-2xl shadow-red-500/30 sm:px-10 lg:min-h-[430px] lg:px-16">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+                backgroundImage:
+                  "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
                 backgroundSize: "40px 40px",
               }}
             />
           </div>
 
-          {/* Decorative circles */}
-          <div
-            aria-hidden="true"
-            className="absolute -right-24 -top-24 h-72 w-72 rounded-full border-2 border-white/20 transition-transform duration-700 group-hover:scale-110"
-          />
+          <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full border-2 border-white/20 transition-transform duration-700 group-hover:scale-110" />
+          <div className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full border-2 border-white/15 transition-transform duration-700 group-hover:scale-110" />
 
-          <div
-            aria-hidden="true"
-            className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full border-2 border-white/15 transition-transform duration-700 group-hover:scale-110"
-          />
-
-          {/* Gradient orbs */}
           <div className="pointer-events-none absolute inset-0">
             <div className="absolute -right-40 top-20 h-[400px] w-[400px] rounded-full bg-white/10 blur-[100px]" />
             <div className="absolute -bottom-40 left-[-10%] h-[350px] w-[350px] rounded-full bg-black/10 blur-[80px]" />
@@ -834,7 +879,7 @@ export default function AboutUs() {
           <div className="relative z-10 flex min-h-[310px] flex-col justify-between">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="h-2 w-2 rounded-full bg-white/80 animate-pulse" />
+                <span className="h-2 w-2 animate-pulse rounded-full bg-white/80" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70">
                   Beyond the classroom
                 </span>
@@ -863,7 +908,7 @@ export default function AboutUs() {
                 what comes next.
               </p>
 
-              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm transition-all duration-500 group-hover:scale-110 group-hover:bg-white group-hover:text-red-600 group-hover:shadow-2xl group-hover:shadow-white/30">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm transition-all duration-500 group-hover:scale-110 group-hover:bg-white group-hover:text-red-600">
                 <span className="text-xl transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
                   ↗
                 </span>
