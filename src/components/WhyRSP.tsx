@@ -437,7 +437,7 @@ export default function WhyRSP() {
         </div>
 
         {/* location statement */}
-        <div className="mt-4 grid border border-[#E60012] bg-[#E60012] text-white sm:grid-cols-[1fr_auto]">
+        <div className="mt-15 grid border border-[#E60012] bg-[#E60012] text-white sm:grid-cols-[1fr_auto]">
           <div className="p-7 sm:p-10">
             <div className="flex items-center gap-3">
               <MapPin size={17} />
@@ -447,7 +447,7 @@ export default function WhyRSP() {
               </span>
             </div>
 
-            <p className="mt-6 max-w-2xl text-xl font-medium leading-relaxed sm:text-2xl">
+            <p className="mt-10 top-7 max-w-2xl text-xl font-medium leading-relaxed sm:text-2xl">
               Rohit lives in Kyoto. Your support does not end when you leave
               India — it simply changes shape.
             </p>
@@ -621,9 +621,9 @@ export default function WhyRSP() {
           </div>
 
           {/* CTA */}
-          <div className="mt-25 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3 text-sm text-white/60">
-              <span className="h-2 w-2 rounded-full bg-white" />
+              <span className="h-5 w-2 rounded-full bg-white" />
               Real progress. Real people. Real stories.
             </div>
 
