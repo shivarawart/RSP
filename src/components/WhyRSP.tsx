@@ -9,7 +9,6 @@ import {
   FileCheck2,
   Globe2,
   MapPin,
-  MoveUpRight,
   Sparkles,
 } from "lucide-react";
 
