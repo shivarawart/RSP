@@ -516,41 +516,112 @@ export default function WhyRSP() {
           </div>
 
           {/* result list */}
-          <div className="mt-20 border-t border-white/25 sm:mt-28">
-            {results.map((result) => (
-              <article
-                key={result.number}
-                data-result
-                className="group grid gap-7 border-b border-white/25 py-10 sm:grid-cols-[100px_1fr_300px] sm:items-center sm:py-14"
-              >
-                <span className="font-mono text-xs font-bold tracking-[0.25em] text-white/45">
-                  {result.number}
-                </span>
+          <div className="relative mt-14 overflow-hidden rounded-[2rem] border border-white/15 bg-white/[0.04] shadow-2xl shadow-black/20 sm:mt-20">
+            {/* Soft background decoration */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-red-500/10 blur-3xl"
+            />
 
-                <div>
-                  <h3 className="text-2xl font-bold tracking-[-0.03em] transition-transform duration-500 group-hover:translate-x-2 sm:text-3xl lg:text-4xl">
-                    {result.title}
-                  </h3>
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-40 -left-20 h-80 w-80 rounded-full bg-orange-500/[0.07] blur-3xl"
+            />
+
+            {/* Section heading */}
+            <div className="relative flex flex-col gap-5 border-b border-white/15 px-5 py-7 sm:flex-row sm:items-end sm:justify-between sm:px-8 sm:py-9 lg:px-10">
+              <div>
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="h-2 w-2 animate-pulse rounded-full bg-red-400 shadow-[0_0_16px_rgba(248,113,113,0.8)]" />
+
+                  <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-red-300">
+                    Our impact
+                  </span>
                 </div>
 
-                <div className="flex gap-4">
-                  <p className="text-sm leading-6 text-white/60">
-                    {result.text}
-                  </p>
-                  {/* <div className="flex h-10 w-10 items-center justify-center border-2 hover:bg-blue-100 rounded-2xl border-[rgb(253,253,253)] text-[#000000] hover:bg-red-600 "> */}
-              <ArrowUpRight size={28} strokeWidth={1.5} className="black"/>
-            {/* </div> */}
-                  {/* <MoveUpRight
-                    size={18}
-                    className="mt-1 shrink-0 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
-                  /> */}
-                </div>
-              </article>
-            ))}
+                <h2 className="max-w-2xl text-3xl font-black tracking-[-0.06em] text-white sm:text-5xl">
+                  Results that move
+                  <span className="block bg-gradient-to-r from-red-300 via-orange-200 to-white bg-clip-text text-transparent">
+                    people forward.
+                  </span>
+                </h2>
+              </div>
+
+              <p className="max-w-xs text-sm leading-6 text-white/50 sm:text-right">
+                Practical support, measurable progress, and a clearer path
+                toward Japan.
+              </p>
+            </div>
+
+            {/* Results list */}
+            <div className="relative">
+              {results.map((result, index) => (
+                <article
+                  key={result.number}
+                  data-result
+                  className="group relative overflow-hidden border-b border-white/15 px-5 py-7 transition-colors duration-500 last:border-b-0 hover:bg-white/[0.06] focus-within:bg-white/[0.06] sm:px-8 sm:py-9 lg:px-10"
+                >
+                  {/* Hover accent */}
+                  <div className="absolute inset-y-0 left-0 w-1 origin-bottom scale-y-0 bg-gradient-to-b from-red-400 to-orange-300 transition-transform duration-500 group-hover:scale-y-100 group-focus-within:scale-y-100" />
+
+                  <div className="relative grid gap-6 sm:grid-cols-[72px_minmax(0,1fr)_minmax(240px,320px)] sm:items-center sm:gap-8 lg:grid-cols-[90px_minmax(0,1fr)_360px] lg:gap-12">
+                    {/* Number */}
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/[0.06] font-mono text-[10px] font-bold tracking-[0.15em] text-white/70 transition-all duration-500 group-hover:border-red-300/60 group-hover:bg-red-400 group-hover:text-neutral-950">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+
+                      <span className="hidden font-mono text-[10px] tracking-[0.2em] text-white/30 sm:block">
+                        {result.number}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <div className="min-w-0">
+                      <div className="mb-3 flex items-center gap-2">
+                        <span className="h-px w-7 bg-red-400/70 transition-all duration-500 group-hover:w-12" />
+
+                        <span className="text-[9px] font-bold uppercase tracking-[0.25em] text-white/40 transition-colors duration-500 group-hover:text-red-300">
+                          RSP / Japan
+                        </span>
+                      </div>
+
+                      <h3 className="max-w-2xl text-2xl font-black tracking-[-0.045em] text-white transition-transform duration-500 group-hover:translate-x-2 sm:text-3xl lg:text-4xl">
+                        {result.title}
+                      </h3>
+                    </div>
+
+                    {/* Description and action */}
+                    <div className="flex items-end justify-between gap-5 sm:items-center">
+                      <p className="max-w-sm text-sm leading-6 text-white/55 transition-colors duration-500 group-hover:text-white/80">
+                        {result.text}
+                      </p>
+
+                      <a
+                        href="#about"
+                        aria-label={`Learn more about ${result.title}`}
+                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 text-white/70 transition-all duration-500 hover:border-red-300 hover:bg-red-400 hover:text-neutral-950 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2 focus:ring-offset-neutral-950 group-hover:rotate-45 group-hover:border-red-300 group-hover:bg-red-400 group-hover:text-neutral-950"
+                      >
+                        <ArrowUpRight
+                          size={20}
+                          strokeWidth={1.7}
+                          aria-hidden="true"
+                        />
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Bottom progress indicator */}
+                  <div className="mt-19 h-px w-full overflow-hidden bg-white/10">
+                    <div className="h-full w-0 bg-gradient-to-r from-red-400 to-orange-300 transition-all duration-700 ease-out group-hover:w-full" />
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
 
           {/* CTA */}
-          <div className="mt-12 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-25 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3 text-sm text-white/60">
               <span className="h-2 w-2 rounded-full bg-white" />
               Real progress. Real people. Real stories.
