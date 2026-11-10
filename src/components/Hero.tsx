@@ -698,22 +698,22 @@ export default function Hero({ founderImage }: HeroProps) {
                   <span className="absolute inset-0 h-2.5 w-2.5 rounded-full bg-red-400 animate-ping" />
                 </div>
 
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">
+                {/* <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">
                   Founded by
-                </span>
+                </span> */}
               </div>
 
               <div className="flex items-center gap-3">
                 <div className="h-10 w-10 overflow-hidden rounded-full border-2 border-white/20 shadow-lg">
                   <img
                     src={founderImage}
-                    alt="Rohit Shiv Prasad"
+                    alt=""
                     className="h-full w-full object-cover"
                   />
                 </div>
                 <div>
                   <span className="text-sm font-bold text-white">
-                    Rohit Shiv Prasad
+                 
                   </span>
                   <p className="text-xs text-white/40">Kyoto, Japan</p>
                 </div>
@@ -779,7 +779,7 @@ export default function Hero({ founderImage }: HeroProps) {
               {/* Image */}
               <img
                 src={founderImage}
-                alt="Rohit Shiv Prasad, founder of RSP in Japan"
+                alt=""
                 className="
                   hero-image
                   h-[108%]
@@ -840,14 +840,14 @@ export default function Hero({ founderImage }: HeroProps) {
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-red-400 animate-pulse" />
-                    <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-white/50">
+                    {/* <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-white/50">
                       Founder
-                    </p>
+                    </p> */}
                   </div>
 
-                  <p className="mt-1.5 text-xl font-bold tracking-tight text-white drop-shadow-lg">
-                    Rohit Shiv Prasad
-                  </p>
+                  {/* <p className="mt-1.5 text-xl font-bold tracking-tight text-white drop-shadow-lg">
+                  
+                  </p> */}
 
                   <p className="mt-1 flex items-center gap-2 text-xs text-white/50">
                     <span className="h-px w-4 bg-white/30" />

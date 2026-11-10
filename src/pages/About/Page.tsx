@@ -45,7 +45,7 @@ const timeline: TimelineItem[] = [
     year: "Today",
     title: "The journey continues",
     description:
-      "From Kyoto, Rohit keeps walking beside every new student and family.",
+      "From Kyoto, We keeps walking beside every new student and family.",
   },
 ];
 

@@ -51,7 +51,7 @@ const features: Feature[] = [
     id: "04",
     title: "Support from Japan",
     description:
-      "Rohit lives in Kyoto. Your relationship with RSP does not end when you leave India. It simply changes shape.",
+      "We lives in Kyoto. Your relationship with RSP does not end when you leave India. It simply changes shape.",
     label: "KYOTO, JAPAN",
     icon: Globe2,
   },
@@ -447,7 +447,7 @@ export default function WhyRSP() {
             </div>
 
             <p className="mt-10 top-7 max-w-2xl text-xl font-medium leading-relaxed sm:text-2xl">
-              Rohit lives in Kyoto. Your support does not end when you leave
+            We lives in Kyoto. Your support does not end when you leave
               India — it simply changes shape.
             </p>
           </div>

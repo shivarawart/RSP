@@ -18,7 +18,7 @@ interface Founder {
 
 const founders: Founder[] = [
   {
-    name: "Rohit",
+    name: "Not Avaliable ",
     role: "Founder · RSP in Japan",
     location: "Kyoto, Japan",
     image: "/Gemini_Generated_Image_a0bu8ha0bu8ha0bu.png",
@@ -397,12 +397,12 @@ export default function Founders() {
             className="relative h-[500px] overflow-hidden sm:h-[650px] lg:h-[760px]"
           >
             <div data-image-wrap className="absolute -inset-[6%] h-[140%]">
-              <img
+              {/* <img
                 data-portrait-image
                 src={founder.image}
                 alt={`${founder.name}, founder of RSP in Japan`}
                 className="h-full w-full object-cover object-center"
-              />
+              /> */}
             </div>
 
             {/* Image overlay */}
