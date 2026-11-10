@@ -4,7 +4,7 @@ import WhyRSP from "../../components/WhyRSP";
 function App() {
   return (
     <div>
-      <Hero founderImage="/public/WhatsApp Image 2026-08-31 at 00.23.40.jpeg" />
+      <Hero founderImage="/WhatsApp Image 2026-08-31 at 00.23.40.jpeg" />
       <StatsSection />
       <WhyRSP />
     </div>
