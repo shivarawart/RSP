@@ -356,7 +356,7 @@ export default function Founders() {
               </span>
             </div>
 
-            <div className="overflow-hidden [perspective:1000px]">
+            {/* <div className="overflow-hidden [perspective:1000px]">
               <h1
                 data-title
                 className="max-w-5xl text-[clamp(3.4rem,9vw,9rem)] font-black leading-[0.82] tracking-[-0.08em]"
@@ -365,7 +365,7 @@ export default function Founders() {
                 <br />
                 <span className="text-red-600">founder.</span>
               </h1>
-            </div>
+            </div> */}
           </div>
 
           <div data-hero-copy className="max-w-md lg:justify-self-end">

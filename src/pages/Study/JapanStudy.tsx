@@ -172,13 +172,13 @@ const careerItems: CareerItem[] = [
 
 const imageCards = [
   {
-    image: "/WhatsApp Image 2026-08-31 at 00.23.40.jpeg",
+    image: "/B..png",
     label: "01 / The campus",
     title: "A place to focus.",
     className: "lg:mt-20",
   },
   {
-    image: "/WhatsApp Image 2026-08-31 at 00.23.39.jpeg",
+    image: "/C.png",
     label: "02 / The neighbourhood",
     title: "A city to explore.",
     className: "lg:-mt-4",
@@ -709,7 +709,7 @@ function IntroSection() {
             <div className="group relative aspect-[4/5] overflow-hidden bg-[#e9e9e6] sm:aspect-[5/6] lg:aspect-[4/5]">
 
               <img
-                src="/WhatsApp Image 2026-08-31 at 00.25.02.jpeg"
+                src="/B..png"
                 alt="Yokohama cityscape in Japan"
                 width={2000}
                 height={2500}

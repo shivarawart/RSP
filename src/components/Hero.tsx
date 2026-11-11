@@ -433,22 +433,46 @@ export default function Hero({ founderImage }: HeroProps) {
                 perspective: "1000px",
               }}
             >
-              <h1
-                className="
-                  font-black
-                  leading-[0.84]
-                  tracking-[-0.075em]
-                  text-white
-                  text-[clamp(4rem,9vw,9.5rem)]
-                  drop-shadow-2xl
-                "
-              >
-                <span className="hero-title-line block">Learn</span>
-                <span className="hero-title-line block">Japanese.</span>
-                <span className="hero-title-line block bg-gradient-to-r from-white via-white/80 to-white/30 bg-clip-text text-transparent">
-                  Live Japan.
-                </span>
-              </h1>
+             
+<h1
+  className="
+    relative z-10
+    w-full
+    max-w-full
+    font-black
+    leading-[1.05]
+    tracking-[-0.065em]
+    text-white
+    text-[clamp(3.5rem,9vw,9rem)]
+    break-words
+    overflow-visible
+    select-none
+  "
+>
+  <span className="block whitespace-normal">
+    Learn
+  </span>
+
+  <span className="block whitespace-normal">
+    Japanese<span className="text-orange-400">.</span>
+  </span>
+
+  <span
+    className="
+      block
+      whitespace-normal
+      bg-gradient-to-r
+      from-orange-300
+      via-rose-300
+      to-white
+      bg-clip-text
+      text-transparent
+    "
+  >
+    Live Japan<span className="text-orange-300">.</span>
+  </span>
+</h1>
+
             </div>
 
             {/* Description - Enhanced */}
