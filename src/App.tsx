@@ -4,7 +4,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 const Home = lazy(() => import("./pages/Home/Home"));
 const About = lazy(() => import("./pages/About/Page"));
 import Courses from "./pages/courses/page";
-import Founder from "./pages/founder/page";
+// import Founder from "./pages/founder/page";
 import Contact from "./pages/Contect/page";
 import JapanStudy from "./pages/Study/JapanStudy";
 
@@ -25,7 +25,7 @@ export default function App() {
 
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/founder" element={<Founder />} />
+        {/* <Route path="/founder" element={<Founder />} /> */}
 
         <Route path="/JapanStudy" element={<JapanStudy />} />
 
