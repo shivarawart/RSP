@@ -12,7 +12,7 @@ const navItems: NavItem[] = [
   { name: "About", href: "/about" },
   { name: "Courses", href: "/courses" },
   { name: "Study in Japan", href: "/JapanStudy" },
-  { name: "Founder", href: "/founder" },
+  // { name: "Founder", href: "/founder" },
   { name: "Contact", href: "/contact" },
 ];
 
