@@ -493,443 +493,411 @@ function HeroSection() {
 
 function IntroSection() {
   return (
-    
-<section className="relative isolate overflow-hidden bg-[#f7f7f5] px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40 xl:px-20">
-  {/* =========================================================
+    <section className="relative isolate overflow-hidden bg-[#f7f7f5] px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40 xl:px-20">
+      {/* =========================================================
       BACKGROUND
   ========================================================= */}
-  <div
-    aria-hidden="true"
-    className="pointer-events-none absolute inset-0 overflow-hidden"
-  >
-    {/* Ambient red lights */}
-    <div className="absolute -right-40 top-0 h-[550px] w-[550px] animate-[pulse_8s_ease-in-out_infinite] rounded-full bg-[#d71920]/[0.045] blur-[140px]" />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+      >
+        {/* Ambient red lights */}
+        <div className="absolute -right-40 top-0 h-[550px] w-[550px] animate-[pulse_8s_ease-in-out_infinite] rounded-full bg-[#d71920]/[0.045] blur-[140px]" />
 
-    <div className="absolute -bottom-60 -left-40 h-[600px] w-[600px] animate-[pulse_10s_ease-in-out_infinite] rounded-full bg-[#d71920]/[0.025] blur-[150px]" />
+        <div className="absolute -bottom-60 -left-40 h-[600px] w-[600px] animate-[pulse_10s_ease-in-out_infinite] rounded-full bg-[#d71920]/[0.025] blur-[150px]" />
 
-    {/* Japanese characters */}
-    <span className="absolute right-[4%] top-[5%] select-none text-[16rem] font-black leading-none text-black/[0.018] transition-transform duration-1000 hover:scale-110 sm:text-[22rem]">
-      日
-    </span>
+        {/* Japanese characters */}
+        <span className="absolute right-[4%] top-[5%] select-none text-[16rem] font-black leading-none text-black/[0.018] transition-transform duration-1000 hover:scale-110 sm:text-[22rem]">
+          日
+        </span>
 
-    <span className="absolute bottom-[12%] left-[2%] select-none text-[10rem] font-black leading-none text-[#d71920]/[0.025]">
-      本
-    </span>
+        <span className="absolute bottom-[12%] left-[2%] select-none text-[10rem] font-black leading-none text-[#d71920]/[0.025]">
+          本
+        </span>
 
-    {/* Editorial grid */}
-    <div
-      className="absolute inset-0 opacity-[0.025]"
-      style={{
-        backgroundImage:
-          "linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px)",
-        backgroundSize: "80px 80px",
-      }}
-    />
-  </div>
+        {/* Editorial grid */}
+        <div
+          className="absolute inset-0 opacity-[0.025]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px)",
+            backgroundSize: "80px 80px",
+          }}
+        />
+      </div>
 
-  {/* =========================================================
+      {/* =========================================================
       MAIN
   ========================================================= */}
-  <div className="relative mx-auto max-w-[1600px]">
-
-    {/* =======================================================
+      <div className="relative mx-auto max-w-[1600px]">
+        {/* =======================================================
         HEADER
     ======================================================= */}
-    <div className="mb-16 flex animate-[fadeIn_0.8s_ease-out_both] flex-col justify-between gap-6 border-b border-black/10 pb-6 sm:flex-row sm:items-center lg:mb-24">
+        <div className="mb-16 flex animate-[fadeIn_0.8s_ease-out_both] flex-col justify-between gap-6 border-b border-black/10 pb-6 sm:flex-row sm:items-center lg:mb-24">
+          <div className="flex items-center gap-3">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d71920]/40" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#d71920]" />
+            </span>
 
-      <div className="flex items-center gap-3">
-        <span className="relative flex h-2.5 w-2.5">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d71920]/40" />
-          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#d71920]" />
-        </span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/60 sm:text-xs">
+              Study in Japan
+            </span>
 
-        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/60 sm:text-xs">
-          Study in Japan
-        </span>
+            <span className="text-xs text-black/20">/</span>
 
-        <span className="text-xs text-black/20">/</span>
+            <span className="text-sm font-medium text-black/40">で学ぶ</span>
+          </div>
 
-        <span className="text-sm font-medium text-black/40">
-          で学ぶ
-        </span>
-      </div>
+          <div className="flex items-center gap-4">
+            <span className="hidden h-px w-10 bg-black/10 sm:block" />
 
-      <div className="flex items-center gap-4">
-        <span className="hidden h-px w-10 bg-black/10 sm:block" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/35">
+              Yokohama · Kanagawa · Japan
+            </span>
+          </div>
+        </div>
 
-        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/35">
-          Yokohama · Kanagawa · Japan
-        </span>
-      </div>
-    </div>
-
-    {/* =======================================================
+        {/* =======================================================
         HERO GRID
     ======================================================= */}
-    <div className="grid items-end gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 xl:gap-28">
-
-      {/* =====================================================
+        <div className="grid items-end gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 xl:gap-28">
+          {/* =====================================================
           LEFT CONTENT
       ===================================================== */}
-      <div className="relative">
+          <div className="relative">
+            {/* Floating Japanese character */}
+            <div
+              aria-hidden="true"
+              className="absolute -left-3 -top-14 hidden animate-[float_6s_ease-in-out_infinite] select-none text-7xl font-light leading-none text-[#d71920]/15 lg:block"
+            >
+              日
+            </div>
 
-        {/* Floating Japanese character */}
-        <div
-          aria-hidden="true"
-          className="absolute -left-3 -top-14 hidden animate-[float_6s_ease-in-out_infinite] select-none text-7xl font-light leading-none text-[#d71920]/15 lg:block"
-        >
-          日
-        </div>
+            {/* Eyebrow */}
+            <div className="mb-8 flex animate-[slideUp_0.8s_0.15s_ease-out_both] items-center gap-3">
+              <span className="h-px w-10 origin-left animate-[scaleX_0.8s_0.5s_ease-out_both] bg-[#d71920]" />
 
-        {/* Eyebrow */}
-        <div className="mb-8 flex animate-[slideUp_0.8s_0.15s_ease-out_both] items-center gap-3">
-          <span className="h-px w-10 origin-left animate-[scaleX_0.8s_0.5s_ease-out_both] bg-[#d71920]" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#d71920]">
+                Your next chapter
+              </span>
+            </div>
 
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#d71920]">
-            Your next chapter
-          </span>
-        </div>
+            {/* Heading */}
+            <h2 className="max-w-5xl animate-[slideUp_0.9s_0.2s_ease-out_both] text-[clamp(3.7rem,8vw,8.7rem)] font-black leading-[0.83] tracking-[-0.075em] text-[#111]">
+              The next
+              <br />
+              <span className="relative inline-block">
+                step
+                <span className="absolute -bottom-2 left-0 h-[3px] w-12 origin-left animate-[scaleX_1s_0.9s_ease-out_both] bg-[#d71920] sm:-bottom-3 sm:w-20" />
+              </span>
+              <br />
+              <span className="relative inline-block bg-gradient-to-r from-[#d71920] via-[#d71920] to-[#9d1016] bg-clip-text text-transparent">
+                has a place.
+              </span>
+            </h2>
 
-        {/* Heading */}
-        <h2 className="max-w-5xl animate-[slideUp_0.9s_0.2s_ease-out_both] text-[clamp(3.7rem,8vw,8.7rem)] font-black leading-[0.83] tracking-[-0.075em] text-[#111]">
-          The next
-          <br />
+            {/* Main description */}
+            <p className="mt-10 max-w-xl animate-[slideUp_0.8s_0.35s_ease-out_both] text-base font-medium leading-7 tracking-[-0.01em] text-black/55 sm:text-lg sm:leading-8 lg:mt-14">
+              Yokohama language school gives your Japanese a new context: a
+              classroom, a neighbourhood, and a city where you can begin making
+              the language yours.
+            </p>
 
-          <span className="relative inline-block">
-            step
-
-            <span className="absolute -bottom-2 left-0 h-[3px] w-12 origin-left animate-[scaleX_1s_0.9s_ease-out_both] bg-[#d71920] sm:-bottom-3 sm:w-20" />
-          </span>
-
-          <br />
-
-          <span className="relative inline-block bg-gradient-to-r from-[#d71920] via-[#d71920] to-[#9d1016] bg-clip-text text-transparent">
-            has a place.
-          </span>
-        </h2>
-
-        {/* Main description */}
-        <p className="mt-10 max-w-xl animate-[slideUp_0.8s_0.35s_ease-out_both] text-base font-medium leading-7 tracking-[-0.01em] text-black/55 sm:text-lg sm:leading-8 lg:mt-14">
-          Yokohama language school gives your Japanese a new context:
-          a classroom, a neighbourhood, and a city where you can begin
-          making the language yours.
-        </p>
-
-        {/* ===================================================
+            {/* ===================================================
             EXPERIENCE TAGS
         =================================================== */}
-        <div className="mt-8 flex max-w-xl flex-wrap gap-2.5 sm:mt-10 sm:gap-3">
-          {[
-            "Language",
-            "City",
-            "Culture",
-            "Future",
-          ].map((item, index) => (
-            <span
-              key={item}
-              className="animate-[fadeIn_0.6s_ease-out_both] rounded-full border border-black/10 bg-white px-4 py-2.5 text-[9px] font-bold uppercase tracking-[0.2em] text-black/60 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d71920]/30 hover:bg-[#d71920] hover:text-white hover:shadow-lg hover:shadow-[#d71920]/15 sm:px-5 sm:text-[10px]"
-              style={{
-                animationDelay: `${0.55 + index * 0.08}s`,
-              }}
-            >
-              {item}
-            </span>
-          ))}
-        </div>
+            <div className="mt-8 flex max-w-xl flex-wrap gap-2.5 sm:mt-10 sm:gap-3">
+              {["Language", "City", "Culture", "Future"].map((item, index) => (
+                <span
+                  key={item}
+                  className="animate-[fadeIn_0.6s_ease-out_both] rounded-full border border-black/10 bg-white px-4 py-2.5 text-[9px] font-bold uppercase tracking-[0.2em] text-black/60 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d71920]/30 hover:bg-[#d71920] hover:text-white hover:shadow-lg hover:shadow-[#d71920]/15 sm:px-5 sm:text-[10px]"
+                  style={{
+                    animationDelay: `${0.55 + index * 0.08}s`,
+                  }}
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
 
-        {/* ===================================================
+            {/* ===================================================
             QUICK FACTS
         =================================================== */}
-        <div className="mt-12 grid max-w-xl grid-cols-3 border-y border-black/10 py-6 sm:mt-16 sm:py-7">
+            <div className="mt-12 grid max-w-xl grid-cols-3 border-y border-black/10 py-6 sm:mt-16 sm:py-7">
+              <div className="pr-4">
+                <p className="text-xl font-black tracking-tight text-black sm:text-2xl">
+                  01
+                </p>
 
-          <div className="pr-4">
-            <p className="text-xl font-black tracking-tight text-black sm:text-2xl">
-              01
-            </p>
+                <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.18em] text-black/35">
+                  Language
+                </p>
+              </div>
 
-            <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.18em] text-black/35">
-              Language
-            </p>
-          </div>
+              <div className="border-l border-black/10 px-4">
+                <p className="text-xl font-black tracking-tight text-black sm:text-2xl">
+                  02
+                </p>
 
-          <div className="border-l border-black/10 px-4">
-            <p className="text-xl font-black tracking-tight text-black sm:text-2xl">
-              02
-            </p>
+                <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.18em] text-black/35">
+                  Lifestyle
+                </p>
+              </div>
 
-            <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.18em] text-black/35">
-              Lifestyle
-            </p>
-          </div>
+              <div className="border-l border-black/10 pl-4">
+                <p className="text-xl font-black tracking-tight text-black sm:text-2xl">
+                  03
+                </p>
 
-          <div className="border-l border-black/10 pl-4">
-            <p className="text-xl font-black tracking-tight text-black sm:text-2xl">
-              03
-            </p>
+                <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.18em] text-black/35">
+                  Future
+                </p>
+              </div>
+            </div>
 
-            <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.18em] text-black/35">
-              Future
-            </p>
-          </div>
-        </div>
-
-        {/* ===================================================
+            {/* ===================================================
             DESTINATION META
         =================================================== */}
-        <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-[10px] font-bold uppercase tracking-[0.2em] text-black/35">
-          <span>Yokohama</span>
-          <span className="h-1 w-1 rounded-full bg-[#d71920]" />
-          <span>Kanagawa</span>
-          <span className="h-1 w-1 rounded-full bg-[#d71920]" />
-          <span>Japan</span>
-        </div>
-      </div>
+            <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-[10px] font-bold uppercase tracking-[0.2em] text-black/35">
+              <span>Yokohama</span>
+              <span className="h-1 w-1 rounded-full bg-[#d71920]" />
+              <span>Kanagawa</span>
+              <span className="h-1 w-1 rounded-full bg-[#d71920]" />
+              <span>Japan</span>
+            </div>
+          </div>
 
-      {/* =====================================================
+          {/* =====================================================
           RIGHT IMAGE EXPERIENCE
       ===================================================== */}
-      <div className="relative">
-
-        <div className="relative ml-auto max-w-[760px]">
-
-          {/* Red architectural block */}
-          <div
-            aria-hidden="true"
-            className="absolute -right-3 -top-3 z-0 h-28 w-28 animate-[fadeIn_0.8s_0.4s_ease-out_both] bg-[#d71920] transition-transform duration-700 hover:translate-x-2 hover:-translate-y-2 sm:-right-5 sm:-top-5 sm:h-36 sm:w-36"
-          />
-
-          {/* Small vertical number */}
-          <div className="absolute -left-10 top-10 z-20 hidden text-[9px] font-bold tracking-[0.3em] text-black/30 xl:block [writing-mode:vertical-rl]">
-            EXPERIENCE JAPAN
-          </div>
-
-          {/* Main image */}
-          <div className="relative z-10 overflow-hidden bg-black p-2 shadow-[0_35px_100px_rgba(0,0,0,0.14)] animate-[imageReveal_1.2s_0.2s_ease-out_both] sm:p-3">
-
-            <div className="group relative aspect-[4/5] overflow-hidden bg-[#e9e9e6] sm:aspect-[5/6] lg:aspect-[4/5]">
-
-              <img
-                src="/B..png"
-                alt="Yokohama cityscape in Japan"
-                width={2000}
-                height={2500}
-                loading="lazy"
-                decoding="async"
-                className="h-full w-full object-cover object-center transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
+          <div className="relative">
+            <div className="relative ml-auto max-w-[760px]">
+              {/* Red architectural block */}
+              <div
+                aria-hidden="true"
+                className="absolute -right-3 -top-3 z-0 h-28 w-28 animate-[fadeIn_0.8s_0.4s_ease-out_both] bg-[#d71920] transition-transform duration-700 hover:translate-x-2 hover:-translate-y-2 sm:-right-5 sm:-top-5 sm:h-36 sm:w-36"
               />
 
-              {/* Gradient */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-black/10 opacity-90 transition-opacity duration-700 group-hover:opacity-100" />
+              {/* Small vertical number */}
+              <div className="absolute -left-10 top-10 z-20 hidden text-[9px] font-bold tracking-[0.3em] text-black/30 xl:block [writing-mode:vertical-rl]">
+                EXPERIENCE JAPAN
+              </div>
 
-              {/* Image corner */}
-              <div className="absolute left-5 top-5 h-10 w-10 border-l border-t border-white/50 transition-all duration-500 group-hover:h-14 group-hover:w-14 sm:left-7 sm:top-7" />
+              {/* Main image */}
 
-              <div className="absolute bottom-5 right-5 h-10 w-10 border-b border-r border-white/50 transition-all duration-500 group-hover:h-14 group-hover:w-14 sm:bottom-7 sm:right-7" />
+              <div className="relative z-10 overflow-hidden bg-black p-2 shadow-[0_35px_100px_rgba(0,0,0,0.14)] animate-[imageReveal_1.2s_0.2s_ease-out_both] sm:p-3">
+                <div className="group relative h-auto w-full overflow-hidden bg-[#e9e9e6]">
+                  <img
+                    src="/B..png"
+                    alt="Yokohama cityscape in Japan"
+                    loading="lazy"
+                    decoding="async"
+                    className="block h-auto w-full object-contain object-center transition-transform duration-[1400ms] ease-out group-hover:scale-[1.03]"
+                  />
 
-              {/* Image content */}
-              <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between sm:bottom-8 sm:left-8 sm:right-8">
+                  {/* Gradient */}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-black/10 opacity-90 transition-opacity duration-700 group-hover:opacity-100" />
 
-                <div className="translate-y-2 transition-transform duration-500 group-hover:translate-y-0">
-                  <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-white/60">
-                    Kanagawa
-                  </p>
+                  {/* Image corner */}
+                  <div className="absolute left-5 top-5 h-10 w-10 border-l border-t border-white/50 transition-all duration-500 group-hover:h-14 group-hover:w-14 sm:left-7 sm:top-7" />
 
-                  <p className="mt-1 text-3xl font-black tracking-[-0.05em] text-white sm:text-4xl">
-                    Yokohama
-                  </p>
+                  <div className="absolute bottom-5 right-5 h-10 w-10 border-b border-r border-white/50 transition-all duration-500 group-hover:h-14 group-hover:w-14 sm:bottom-7 sm:right-7" />
 
-                  <p className="mt-2 max-w-xs text-xs font-medium leading-5 text-white/60">
-                    Where language becomes part of everyday life.
-                  </p>
-                </div>
+                  {/* Image content */}
+                  <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between sm:bottom-8 sm:left-8 sm:right-8">
+                    <div className="translate-y-2 transition-transform duration-500 group-hover:translate-y-0">
+                      <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-white/60">
+                        Kanagawa
+                      </p>
 
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-[10px] font-bold text-white backdrop-blur-md transition-all duration-500 group-hover:rotate-12 group-hover:bg-[#d71920] sm:h-14 sm:w-14">
-                  JP
+                      <p className="mt-1 text-3xl font-black tracking-[-0.05em] text-white sm:text-4xl">
+                        Yokohama
+                      </p>
+
+                      <p className="mt-2 max-w-xs text-xs font-medium leading-5 text-white/60">
+                        Where language becomes part of everyday life.
+                      </p>
+                    </div>
+
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-[10px] font-bold text-white backdrop-blur-md transition-all duration-500 group-hover:rotate-12 group-hover:bg-[#d71920] sm:h-14 sm:w-14">
+                      JP
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* =================================================
+              {/* =================================================
               FLOATING INFORMATION CARD
           ================================================= */}
-          <div className="relative z-20 -mt-10 ml-5 w-[calc(100%-40px)] max-w-[390px] animate-[slideUp_0.8s_0.7s_ease-out_both] border border-black/10 bg-white p-5 shadow-[0_25px_60px_rgba(0,0,0,0.09)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_35px_80px_rgba(0,0,0,0.12)] sm:-mt-14 sm:ml-10 sm:p-7">
+              <div className="relative z-20 -mt-10 ml-5 w-[calc(100%-40px)] max-w-[390px] animate-[slideUp_0.8s_0.7s_ease-out_both] border border-black/10 bg-white p-5 shadow-[0_25px_60px_rgba(0,0,0,0.09)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_35px_80px_rgba(0,0,0,0.12)] sm:-mt-14 sm:ml-10 sm:p-7">
+                <div className="flex items-start justify-between gap-6">
+                  <div>
+                    <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-[#d71920]">
+                      Start here
+                    </p>
 
-            <div className="flex items-start justify-between gap-6">
+                    <p className="mt-2 text-xl font-black tracking-[-0.04em] text-black sm:text-2xl">
+                      Make Japanese yours.
+                    </p>
+                  </div>
 
-              <div>
-                <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-[#d71920]">
-                  Start here
-                </p>
+                  <span className="text-2xl font-light text-black/15">01</span>
+                </div>
 
-                <p className="mt-2 text-xl font-black tracking-[-0.04em] text-black sm:text-2xl">
-                  Make Japanese yours.
-                </p>
+                <div className="mt-5 h-px bg-black/10" />
+
+                <div className="mt-5 grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-black/30">
+                      Learn
+                    </p>
+
+                    <p className="mt-1 text-sm font-bold text-black">
+                      Japanese
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-black/30">
+                      Experience
+                    </p>
+
+                    <p className="mt-1 text-sm font-bold text-black">
+                      Yokohama
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <span className="text-2xl font-light text-black/15">
-                01
+              {/* Vertical label */}
+              <span className="absolute -right-12 top-1/2 hidden -translate-y-1/2 rotate-90 text-[9px] font-bold uppercase tracking-[0.4em] text-black/25 xl:block">
+                Discover · Learn · Belong
               </span>
-            </div>
-
-            <div className="mt-5 h-px bg-black/10" />
-
-            <div className="mt-5 grid grid-cols-2 gap-4">
-
-              <div>
-                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-black/30">
-                  Learn
-                </p>
-
-                <p className="mt-1 text-sm font-bold text-black">
-                  Japanese
-                </p>
-              </div>
-
-              <div>
-                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-black/30">
-                  Experience
-                </p>
-
-                <p className="mt-1 text-sm font-bold text-black">
-                  Yokohama
-                </p>
-              </div>
             </div>
           </div>
-
-          {/* Vertical label */}
-          <span className="absolute -right-12 top-1/2 hidden -translate-y-1/2 rotate-90 text-[9px] font-bold uppercase tracking-[0.4em] text-black/25 xl:block">
-            Discover · Learn · Belong
-          </span>
         </div>
-      </div>
-    </div>
 
-    {/* =======================================================
+        {/* =======================================================
         EXPERIENCE CARDS
     ======================================================= */}
-    <div className="mt-24 border-t border-black/10 pt-10 sm:mt-32 lg:mt-40">
+        <div className="mt-24 border-t border-black/10 pt-10 sm:mt-32 lg:mt-40">
+          <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#d71920]">
+                Beyond the classroom
+              </p>
 
-      <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-        <div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#d71920]">
-            Beyond the classroom
-          </p>
-
-          <h3 className="mt-3 max-w-2xl text-3xl font-black tracking-[-0.055em] text-black sm:text-4xl lg:text-5xl">
-            Learn a language.
-            <span className="text-black/30"> Live the context.</span>
-          </h3>
-        </div>
-
-        <p className="max-w-sm text-sm leading-6 text-black/40">
-          The city becomes part of your learning experience,
-          giving every new word somewhere real to belong.
-        </p>
-      </div>
-
-      {/* Cards */}
-      <div className="grid gap-px overflow-hidden border border-black/10 bg-black/10 sm:grid-cols-2 lg:grid-cols-4">
-
-        {[
-          {
-            number: "01",
-            title: "Language",
-            description:
-              "Build practical Japanese through everyday conversations and real situations.",
-          },
-          {
-            number: "02",
-            title: "Neighbourhood",
-            description:
-              "Step outside the classroom and discover the rhythm of life around you.",
-          },
-          {
-            number: "03",
-            title: "Culture",
-            description:
-              "Experience traditions, food, people and perspectives beyond the textbook.",
-          },
-          {
-            number: "04",
-            title: "Future",
-            description:
-              "Turn your Japanese journey into a foundation for what comes next.",
-          },
-        ].map((item, index) => (
-          <article
-            key={item.number}
-            className="group relative bg-[#f7f7f5] p-7 transition-all duration-500 hover:bg-white sm:p-8 lg:p-9"
-            style={{
-              animation: "slideUp 0.7s ease-out both",
-              animationDelay: `${0.1 + index * 0.1}s`,
-            }}
-          >
-            {/* Number */}
-            <div className="flex items-start justify-between">
-              <span className="text-xs font-black text-[#d71920]">
-                {item.number}
-              </span>
-
-              <span className="text-xl font-light text-black/10 transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#d71920]/30">
-                ↗
-              </span>
+              <h3 className="mt-3 max-w-2xl text-3xl font-black tracking-[-0.055em] text-black sm:text-4xl lg:text-5xl">
+                Learn a language.
+                <span className="text-black/30"> Live the context.</span>
+              </h3>
             </div>
 
-            {/* Title */}
-            <h4 className="mt-14 text-xl font-black tracking-[-0.04em] text-black transition-transform duration-500 group-hover:translate-x-1">
-              {item.title}
-            </h4>
-
-            {/* Description */}
-            <p className="mt-4 text-sm leading-6 text-black/45">
-              {item.description}
+            <p className="max-w-sm text-sm leading-6 text-black/40">
+              The city becomes part of your learning experience, giving every
+              new word somewhere real to belong.
             </p>
+          </div>
 
-            {/* Bottom line */}
-            <div className="mt-8 h-px w-8 origin-left bg-[#d71920] transition-all duration-500 group-hover:w-full" />
-          </article>
-        ))}
-      </div>
-    </div>
+          {/* Cards */}
+          <div className="grid gap-px overflow-hidden border border-black/10 bg-black/10 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                number: "01",
+                title: "Language",
+                description:
+                  "Build practical Japanese through everyday conversations and real situations.",
+              },
+              {
+                number: "02",
+                title: "Neighbourhood",
+                description:
+                  "Step outside the classroom and discover the rhythm of life around you.",
+              },
+              {
+                number: "03",
+                title: "Culture",
+                description:
+                  "Experience traditions, food, people and perspectives beyond the textbook.",
+              },
+              {
+                number: "04",
+                title: "Future",
+                description:
+                  "Turn your Japanese journey into a foundation for what comes next.",
+              },
+            ].map((item, index) => (
+              <article
+                key={item.number}
+                className="group relative bg-[#f7f7f5] p-7 transition-all duration-500 hover:bg-white sm:p-8 lg:p-9"
+                style={{
+                  animation: "slideUp 0.7s ease-out both",
+                  animationDelay: `${0.1 + index * 0.1}s`,
+                }}
+              >
+                {/* Number */}
+                <div className="flex items-start justify-between">
+                  <span className="text-xs font-black text-[#d71920]">
+                    {item.number}
+                  </span>
 
-    {/* =======================================================
+                  <span className="text-xl font-light text-black/10 transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#d71920]/30">
+                    ↗
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h4 className="mt-14 text-xl font-black tracking-[-0.04em] text-black transition-transform duration-500 group-hover:translate-x-1">
+                  {item.title}
+                </h4>
+
+                {/* Description */}
+                <p className="mt-4 text-sm leading-6 text-black/45">
+                  {item.description}
+                </p>
+
+                {/* Bottom line */}
+                <div className="mt-8 h-px w-8 origin-left bg-[#d71920] transition-all duration-500 group-hover:w-full" />
+              </article>
+            ))}
+          </div>
+        </div>
+
+        {/* =======================================================
         FINAL STATEMENT
     ======================================================= */}
-    <div className="mt-20 flex flex-col justify-between gap-8 sm:mt-28 lg:flex-row lg:items-center">
+        <div className="mt-20 flex flex-col justify-between gap-8 sm:mt-28 lg:flex-row lg:items-center">
+          <div className="max-w-3xl">
+            <p className="text-[clamp(1.8rem,3.5vw,3.8rem)] font-black leading-[1] tracking-[-0.055em] text-black">
+              Your Japanese journey doesn't begin
+              <span className="text-[#d71920]"> when you arrive.</span>
+            </p>
 
-      <div className="max-w-3xl">
-        <p className="text-[clamp(1.8rem,3.5vw,3.8rem)] font-black leading-[1] tracking-[-0.055em] text-black">
-          Your Japanese journey doesn't begin
-          <span className="text-[#d71920]"> when you arrive.</span>
-        </p>
+            <p className="mt-5 max-w-xl text-sm leading-6 text-black/40 sm:text-base">
+              It begins the moment you decide that Japan could become part of
+              your story.
+            </p>
+          </div>
 
-        <p className="mt-5 max-w-xl text-sm leading-6 text-black/40 sm:text-base">
-          It begins the moment you decide that Japan could become
-          part of your story.
-        </p>
+          {/* CTA */}
+          <a
+            href="#contact"
+            className="group inline-flex w-fit items-center gap-5 border-b-2 border-black pb-3 text-xs font-bold uppercase tracking-[0.25em] text-black transition-colors duration-300 hover:border-[#d71920] hover:text-[#d71920]"
+          >
+            Explore your next step
+            <span className="text-lg transition-transform duration-300 group-hover:translate-x-2">
+              →
+            </span>
+          </a>
+        </div>
       </div>
 
-      {/* CTA */}
-      <a
-        href="#contact"
-        className="group inline-flex w-fit items-center gap-5 border-b-2 border-black pb-3 text-xs font-bold uppercase tracking-[0.25em] text-black transition-colors duration-300 hover:border-[#d71920] hover:text-[#d71920]"
-      >
-        Explore your next step
-
-        <span className="text-lg transition-transform duration-300 group-hover:translate-x-2">
-          →
-        </span>
-      </a>
-    </div>
-  </div>
-
-  {/* =========================================================
+      {/* =========================================================
       TAILWIND CUSTOM KEYFRAMES
       Add these to your global CSS / Tailwind layer.
   ========================================================= */}
-  <style>{`
+      <style>{`
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -985,9 +953,7 @@ function IntroSection() {
       }
     }
   `}</style>
-</section>
-
-
+    </section>
   );
 }
 
@@ -1657,6 +1623,27 @@ function FinalCTA() {
               src="changes/WhatsApp Image 2026-09-04 at 19.51.00 (2).jpeg"
               alt="Student exploring streets in Japan after passing JLPT"
               className="h-72 w-full object-cover transition-transform duration-700 group-hover/student:scale-105 sm:h-80"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
+            <div className="absolute left-3 top-3 rounded-full border border-white/30 bg-white/10 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white">
+              In Japan
+            </div>
+            <div className="absolute bottom-4 left-4 right-4">
+              {/* <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/90">
+                Rohan, 24
+              </h3>
+              <p className="mt-1 text-[12px] leading-5 text-white/80">
+                “From Rohtak to Yokohama. The courses gave me the confidence and
+                language skills to start my life here.”
+              </p> */}
+            </div>
+          </figure>
+
+          <figure className="group/student  h-full w-full relative overflow-hidden rounded-3xl bg-white/10 ring-1 ring-white/20 transition-all duration-500 hover:-translate-y-1 hover:bg-white/15 hover:ring-white/30">
+            <img
+              src="cd/image.png"
+              alt="Student exploring streets in Japan after passing JLPT"
+              className="h-full w-full object-cover transition-transform duration-700 group-hover/student:scale-105 sm:h-80"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
             <div className="absolute left-3 top-3 rounded-full border border-white/30 bg-white/10 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white">
